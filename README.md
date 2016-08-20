@@ -1,2 +1,2 @@
 # MILI
-# this is mili object
+this is mili object
