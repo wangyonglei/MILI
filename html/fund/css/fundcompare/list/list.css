@@ -1,0 +1,82 @@
+.duibidelete {
+  padding-top: 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%; }
+  .duibidelete ul {
+    display: block;
+    position: relative;
+    width: 100%; }
+    .duibidelete ul li {
+      height: 70px;
+      position: relative;
+      width: 100%;
+      border-bottom: 1px solid #ebebeb;
+      overflow: hidden; }
+      .duibidelete ul li dd {
+        height: 70px;
+        display: block;
+        float: left; }
+        .duibidelete ul li dd a {
+          width: 100%;
+          height: 100%;
+          display: block;
+          overflow: hidden; }
+      .duibidelete ul li dd:nth-of-type(1) {
+        width: 78%;
+        text-align: left;
+        padding-left: 2%; }
+      .duibidelete ul li dd:nth-of-type(2) {
+        width: 20%; }
+        .duibidelete ul li dd:nth-of-type(2) a {
+          color: #fff; }
+      .duibidelete ul li .duibi-detbtn {
+        background-color: #fd8e35;
+        line-height: 30px;
+        font-size: .8rem;
+        color: #fff;
+        text-align: center;
+        width: 50px;
+        height: 30px;
+        margin-top: 20px; }
+      .duibidelete ul li .jijinlist-tit {
+        font-size: 0.9rem;
+        margin-top: 13px;
+        margin-bottom: 5px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 100%; }
+      .duibidelete ul li .jijin-code {
+        display: inline;
+        position: relative;
+        height: 18px;
+        overflow: hidden; }
+        .duibidelete ul li .jijin-code .jianyi {
+          padding: 1px 8px;
+          float: left;
+          border: 1px solid #eaeaea;
+          text-align: center;
+          font-size: 10px !important;
+          border-radius: 10px; }
+        .duibidelete ul li .jijin-code .jijinlist-count {
+          float: left;
+          width: auto;
+          padding: 1px 10px;
+          margin-left: 5px;
+          font-size: .7rem;
+          border: 1px solid #eaeaea;
+          border-radius: 10px; }
+  .duibidelete .duibi-Btn {
+    position: relative;
+    width: 50%;
+    height: 30px;
+    color: #fff;
+    margin: 0 auto;
+    background-color: #fe484a;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 3px;
+    margin-top: 40px; }
+    .duibidelete .duibi-Btn a {
+      color: #fff; }

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+#include("public/no-cache.htm")
+<meta name="keywords" content="基金组合,绝对回报,稳健,积极" />
+<meta name="description" content="基金组合" />
+<title>基情 推荐组合</title>
+<link rel="stylesheet" type="text/css"
+	href="http://static.miliwealth.com/fund/css/common/common.css$!version">
+<link rel="stylesheet" type="text/css"
+	href="http://static.miliwealth.com/fund/css/zuheList/zuheList.css$!version">
+</head>
+<body>
+	<section class="zuheList">
+		#include("public/header.htm")
+		<div class="zuhe-tab" id="zuhe-tab"><ul><li class="selected">特色FOF</li><li>标准组合</li></ul></div>
+        <div id="zuhe-tab-main" class="main">
+	        <div class="tab-1">
+           <ul class="zuhe-con">
+            <a href="/fof/detail?code=$!group[0].code">
+                <div class="zuhe-cont">
+                    <div class="zuhe-ctfof">$!group[0].name</div>
+                    <div class="zuhe-renqi">人气指数<span>$res[0].pop</span>人</div>
+                </div>
+                <ul class="tesefof">
+                    <li>
+                        <p>近1年最大回撤 <span> < 1%</span></p>
+                        <p>投资偏债型公募基金</p>
+                    </li>
+                    <li>
+                        <p>
+                           成立以来年收益达  <span>$numberTool.format("#0.00",$!{res[0].createYear})%</span>
+                        </p>
+                        <p>害怕亏损的最佳选择</p>
+                    </li>
+                    <p class="fofmore">详情></p>
+                </ul>
+            </a>
+        </ul>
+        
+        <ul class="zuhe-con">
+            <a href="/fof/detail?code=$!group[1].code">
+                <div class="zuhe-cont">
+                    <div class="zuhe-ctfof">$!group[1].name</div>
+                    <div class="zuhe-renqi">人气指数<span>$res[1].pop</span>人</div>
+                </div>
+                <ul class="tesefof">
+                    <li>
+                        <p>过往震荡市最NB的基金经理 </p>
+                        <p>投资偏股型公募基金</p>
+                    </li>
+                    <li>
+                        <p>
+                          近三个月收益达 <span>$!numberTool.format("#0.00",$!group[1].fundGroupYieldRate.nearly3Month)%</span>
+                        </p>
+                        <p>好玩、刺激、搏高收益</p>
+                    </li>
+                    <p class="fofmore">详情></p>
+                </ul>
+            </a>
+        </ul>
+	        </div>
+	        <div class="tab-2">
+
+<ul class="zuhe-con">
+            <a href="/fund/zuheDetail?zuhe=$groupList[0].code">
+                <div class="zuhe-cont">
+                    <div class="zuhe-ct">$!{groupList[0].name}</div>
+                    <div  class="zuhe-conclass">
+                        <ul>
+                            <li>绝对回报</li>
+                            <li>波动性小</li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="other-shu">
+                    <li>
+                        <p>$numberTool.format("#0.00",$!{groupList[0].fundGroupYieldRate.nearly1Year})%</p>
+                        <p>过去一年的收益</p>
+                    </li>
+                    <li>
+                        <p>
+                            $!{popular.juedui}
+                            <span class="other-fen">人</span>
+                        </p>
+                        <p>人气指数</p>
+                    </li>
+                </ul>
+            </a>
+        </ul>
+        <ul class="zuhe-con">
+            <a href="/fund/zuheDetail?zuhe=$groupList[1].code">
+                <div class="zuhe-cont">
+                    <div class="zuhe-ct">$!{groupList[1].name}</div>
+                    <div  class="zuhe-conclass">
+                        <ul>
+                            <li>兼顾收益风险</li>
+                            <li>波动性中等</li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="other-shu">
+                    <li>
+                        <p>$numberTool.format("#0.00",$!{groupList[1].fundGroupYieldRate.nearly1Year})%</p>
+                        <p>过去一年的收益</p>
+                    </li>
+                    <li>
+                        <p>
+                            $!popular.wenjian
+                            <span class="other-fen">人</span>
+                        </p>
+                        <p>人气指数</p>
+                    </li>
+                </ul>
+            </a>
+        </ul>
+        <ul class="zuhe-con">
+            <a href="/fund/zuheDetail?zuhe=$groupList[2].code">
+                <div class="zuhe-cont">
+                    <div class="zuhe-ct">$!{groupList[2].name}</div>
+                    <div  class="zuhe-conclass">
+                        <ul>
+                            <li>搏高收益</li>
+                            <li>波动性大</li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="other-shu">
+                    <li>
+                        <p>$numberTool.format("#0.00",$!{groupList[2].fundGroupYieldRate.nearly1Year})%</p>
+                        <p>过去一年的收益</p>
+                    </li>
+                    <li>
+                        <p>
+                            $!popular.jiji
+                            <span class="other-fen">人</span>
+                        </p>
+                        <p>人气指数</p>
+                    </li>
+                </ul>
+            </a>
+        </ul>
+
+            </div>
+        </div>
+                        
+                        
+                        
+		
+		<div class="fund-t fund-tcenter">
+			组合构建逻辑
+		</div>
+        <div class="zuhe-con zuhe-tu">
+          <h1 class="fund-t">组合优势一，有效降低了波动性（风险）</h1>
+       <img alt="组合降低波动描述" src="http://static.miliwealth.com/fund/images/img1.png" / class="img1">
+      <p>组合由兴全合润分级、华商红利优选、建信双息红利、华商收益增强、诺安全球不动产五支基金构成，占比分别为35%、35%、10%、10%、10%，整体风格非常激进。如此激进的组合，在2015年5-10月，依然有效避免了股市泡沫破灭后的巨幅调整，最大下跌幅度还不到大盘的一半。同时，组合业绩远超大盘，组合实现了15%的正回报，而大盘下跌了25%。</p>
+        </div>
+        <div class="zuhe-con zuhe-tu">
+          <h1 class="fund-t">组合优势二，降低波动=长期财富，真谛！</h1>
+             
+            <img alt="波动描述" src="http://static.miliwealth.com/fund/images/img2.png" class="img2" />
+             <p><span>基情保守组合</span>每年稳定增长10%；<span>某基金产品</span>第一年上涨50%；第二年下跌30%；以此往复十年后，两个产品的收益见上图。</p>
+           
+        </div>
+	</section>
+	<script language="JavaScript" src="http://static.miliwealth.com/fund/code/jquery-1.8.0.min.js"></script>
+    <script src="http://static.miliwealth.com/fund/js/zuhe/zuhe.js$!version"></script>
+</body>
+</html>
+#include("public/tongji.htm")

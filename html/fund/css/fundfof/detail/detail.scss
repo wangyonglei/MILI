@@ -1,0 +1,126 @@
+$border-bottom: 1px solid #e6e6e6;
+.fund-t { position: relative; color: #626e82; font-size: 1rem; height: 40px; line-height: 40px; border-bottom: $border-bottom; }
+.fund-tcenter { text-align: center; width: 103%; left: -3%; }
+.fund-con { position: relative; margin-left: 10px; padding-right: 10px; overflow: hidden; padding-bottom: 15px; font-size: .9rem; line-height: 1.4rem;	}
+
+body{ padding-bottom: 35px;}
+.zuheDetail {
+	/*组合Detail头部*/
+	.zuhe-detailtop { position: relative; height: 50px; color: #626e82; width: 90%; margin-left: 5%; border-bottom: 1px solid #e6e6e6; padding-top: 15px; line-height: 21px;
+		& p:nth-of-type(1) { font-size: 1rem; }
+		& p:nth-of-type(2) { font-size: 12px; margin-top: 1px; }
+	}
+	/*趋势图样式*/
+	.fund-biaoxian{ background-color: #fff;border-bottom: 1px solid #e6e6e6;
+		.fund-trend { height: 240px; padding-bottom: 100px; padding-right: 3%;padding-top: 10px; }
+		#tab_menu { height: 30px;position: relative; line-height: 30px; border-radius: 5px; overflow: hidden; border: $border-bottom; }
+		#tab_menu li { float: left; text-align: center; cursor: pointer; margin-left: -1px; width: 25%; position: relative; font-weight: bold; font-size: .95rem; border-right: $border-bottom }
+		#tab_box { height: 240px; clear: both;  }
+		#tab_menu li.selected { background: #ff0000; color: #fff }
+		/*.main { position: fixed; top: 45px; bottom: 0; width: 100%; overflow: scroll; }*/
+
+	}
+
+	.fund-moni{ position: relative; margin-top: 5px; width: 100%; height: auto; overflow: hidden; display: none;color:#626e82;
+		.fund-monileft{ float: left ; width: 18%; text-align: left; font-size: 12px;
+			p{ width: 100%; height: 25px; line-height: 25px;}
+		}
+		.fund-monilefts{ float: left ; width: 10%; text-align: left; font-size: 12px;
+			p{ width: 100%; height: 25px; line-height: 25px;}
+		}
+		.fund-monirights{ float: right; ; width: 90%;  text-align: right;font-size: 12px;
+			p{ width: 100%; height: 15px; line-height: 15px;}
+		}
+		.fund-moniright{ float: right; ; width: 82%;  text-align: right;font-size: 12px;
+			p{ width: 100%; height: 15px; line-height: 15px;}
+		}
+		.fund-moni1{ float: right;}
+		.fund-moni2{ float: right; margin-right: 4px;}
+	
+	}
+	.fund-moni1{ display: block;}
+	.fund-rose{ background-color: #fff; padding-bottom: 10px;}
+	.zuhedetail-con{ position: relative;color: #959da9;padding: 0 2%; width: 96%;
+		.zuhedetail-img{ width: 100%; height: 120px; position: relative; margin: 10px 0; }
+		.zuhedetail-contit{  height: 30px; position: relative; width: 100%;border-bottom: 1px solid #e6e6e6;
+			& li{ float:left;height: 30px; line-height: 30px; text-align: center; font-size: 12px;}
+			& li:nth-of-type(1){ width: 38%}
+			& li:nth-of-type(2){width: 20%;}
+			& li:nth-of-type(3){width: 25%;}
+			& li:nth-of-type(4){width: 17%;}
+		}
+		.zihedetail-conul{ height: auto; position: relative;
+			& li{ height: 50px; text-align: center; width: 100%;border-bottom: 1px solid #e6e6e6; position: relative;font-size: .8rem;
+				& dl{ height: auto; width: 100%; overflow: hidden; font-size: .8rem; }
+				& dd{ float: left; position: relative;
+					& p:nth-of-type(1){ margin-top: -7px;}
+				}
+				& dd:nth-of-type(1){ width: 30%; padding-left: 8%; overflow:hidden;white-space:nowrap;text-overflow:ellipsis; text-align: left;}
+				& dd:nth-of-type(2){ width: 18%;  line-height: 50px; color: red}
+				& dd:nth-of-type(3){ width: 27%; line-height: 50px;text-align: right;}
+				& dd:nth-of-type(4){ width: 17%;line-height: 50px;}
+			}
+			.zuhe-detfk{ width: 15px; height: 15px;left: -20px;top: 17px; position:relative;  display: block;}
+			& li:nth-of-type(1) dd:nth-of-type(1) .zuhe-detfk{background-color: #439cde;}
+			& li:nth-of-type(2) dd:nth-of-type(1) .zuhe-detfk{background-color: #43c6de;}
+			& li:nth-of-type(3) dd:nth-of-type(1) .zuhe-detfk{background-color: #f34f91;}
+			& li:nth-of-type(4) dd:nth-of-type(1) .zuhe-detfk{background-color: #ee970d;}
+			& li:nth-of-type(5) dd:nth-of-type(1) .zuhe-detfk{background-color: #436bde;}
+		}
+	}
+}
+/*新闻页面点赞*/
+.new-detail-zan { width: 96%; padding: 20px 2%; position: relative; height: 35px;  line-height: 35px;background-color: #fff;
+	& a { display: block; width: 100%; height: 100%; font-size: 10px; color: #878787; }
+	& li { float: left; text-align: center; border: 1px solid #eaeaea;/* background-color: #fff*/; }
+	& li:nth-of-type(1) { width: 32%; }
+	& li:nth-of-type(2) { width: 32%; margin-left: 1%; margin-right: 1%; }
+	& li:nth-of-type(3) { width: 32%; }
+	.new-zan1 { width: 16px; height: 16px; position: relative; top: 2px;
+		& img { width: 16px; height: 16px; }
+	}
+}
+
+
+
+/*购买*/
+#fund-buy{ width: 100%; height: 35px; background-color: #f04523; position: fixed; bottom: 0; left: 0; text-align: center;line-height: 35px;
+	& a{ color: #fff;  display: block; width: 100%; height: 100%;  overflow: hidden;}
+}
+
+
+/*对比*/
+
+.zuhe-duibi{ position: absolute; float: right;right: 0;top: 12px; width: 60px; height: 50px; color: #333; font-size: 2.5rem; font-weight: bold; text-align: center; 
+#detail-duibi-tj{ font-size: 12px; margin-top: 5px;}
+& a { width: 100%; height: 100%; display: block;overflow: hidden;position: absolute;right: 0;top: 0;  color: #626e82; }
+}
+
+
+
+.listduibi { width: 50px; height: 50px; background-color: rgba(255, 51, 102, .8); position: fixed; z-index: 12; bottom: 40px; right: 10px; border-radius: 50%; font-size: .8rem; overflow: hidden; text-align: center;
+	& a { width: 100%; height: 100%; display: block; line-height: 35px; overflow: hidden; color: #fff; border-radius: 50%; }
+}
+#duibinum{margin-top: -18px; position: relative;}
+#duibibg { width: 100%; height: 100%; position: fixed; z-index: 15; left: 0; top: 0; background-color: rgba(0, 0, 0, .8); }
+#duibiceng { width: 70%; height: 140px; background-color: #fff; position: fixed; top: 50%; color: #868686; margin-top: -70px; left: 13%; z-index: 20; padding: 0 2%; border-radius: 5px; }
+.duibicengtit { width: 100%; height: 35px; text-align: center; line-height: 35px; border-bottom: 1px solid #ebebeb; }
+.duibicon { width: 100%; text-align: center; margin-top: 4px; }
+.duibibtn { width: 80%; margin: 0 auto; height: 35px; background-color: #fd8e35; text-align: center; border-radius: 3px; line-height: 35px; margin-top: 5px;
+	& a { width: 100%; height: 100%; overflow: hidden; display: block; color: #fff; }
+}
+#duibiclose { width: 35px; height: 35px; position: relative; z-index: 30; right: -10px; float: right; }
+
+
+
+/*特色fof*/
+#real-tab-menu { height: 30px;position: relative;width: 100%; }
+#real-tab-menuul { width: 60%; margin: 0 auto; height: 30px;position: relative; line-height: 30px; border-radius: 5px; overflow: hidden; border: $border-bottom; }
+#real-tab-menu li {width: 50%; float: left; text-align: center; cursor: pointer; margin-left: -1px;  position: relative; font-weight: bold; font-size: .95rem; border-right: $border-bottom }
+#real-tab-box { height: 240px; clear: both; }
+#real-tab-menu li.selected { background: #ff0000; color: #fff }
+#moni-sy{ height: 50px;}
+#moni-real{ height: 50px;}
+
+#yuan{ width: 10px; height: 10px;border-radius: 5px; background-color: #ff3752; float: left; position: relative;top: 6px; margin-right: 1px;}
+#fang{ width: 10px; height: 10px;border-radius:1px; background-color: #fcb14d; float: left;position: relative;top: 6px;margin-right: 1px;}

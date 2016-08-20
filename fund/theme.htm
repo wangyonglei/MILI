@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+#include("public/no-cache.htm")
+<meta name="keywords" content="基金风格,大盘,中盘,小盘" />
+<meta name="description" content="基金风格" />
+<title>基情 基金排行</title>
+<link rel="stylesheet" type="text/css"
+	href="http://static.miliwealth.com/fund/css/common/common.css$!version">
+<link rel="stylesheet" type="text/css"
+	href="http://static.miliwealth.com/fund/css/theme/theme.css$!version">
+</head>
+<script>
+var id = $themeId;
+</script>
+<body>
+#include("public/header.htm")
+<section class="theme">
+	<div id="wrapper" style="padding-top:10px">
+		<div id="scroller">
+			<div class="jijinlist-nav">
+				<ul>
+					<li>基金名称</li>
+					<li>基情评分 <span class="jiantou">↓</span>
+					</li>
+					<li>近一年</li>
+				</ul>
+			</div>
+			<div id="thelist" class="jijinlist-con">
+			#set($Double= 0.0)
+			#if($listSize > 0)
+				#foreach($item in $list)
+				<ul>
+					<a href="/fund/fundDetail?sid=$!{item.sid}">
+						#set($score = $!numberTool.format("#0.0", $item.yieldRate.score))
+						#if($score)
+							#set($score = $Double.parseDouble($score))
+						#end
+						<li>
+							<dl>
+								<dd>
+									<div class="jijinlist-tit">$item.name</div>
+									<div class="jijin-code">
+										<div class="jianyi red">
+										#if($score <= 7.5)
+											建议转换
+										#elseif($score > 7.5 && $score <= 8.5)
+											继续观望
+										#elseif($score > 8.5)
+											建议持有
+										#end
+										</div>
+										<div class="jijinlist-count">$!{item.code}</div>
+									</div>
+								</dd>
+								#if($score < 7.5)
+								<dd><span class="budao">不到</span>7.5</dd>
+								#else
+								<dd>$score</dd>
+								#end
+								<dd>
+									
+									#if($item.yieldRate.nearly1Year)
+									<p class="jijinlist-pj">$!{item.yieldRate.dataDate}</p> 
+									<p class="jijinlist-zcolor">
+										$numberTool.format("#0.00", $item.yieldRate.nearly1Year)<span class="jijinlist-bai">%</span>
+									</p>
+									#else
+									<!-- <p class="jijinlist-pj">$!{item.yieldRate.dataDate}</p>  -->
+                                    <p class="jijinlist-zanwu">
+                                      <!--   $numberTool.format("#0.00", $item.yieldRate.nearly1Year)<span class="jijinlist-bai">%</span> --><span class="budao">暂无</span>
+                                    </p>
+									#end
+								</dd>
+							</dl>
+						</li>
+					</a>
+				</ul>
+				#end
+			#else
+				暂无内容
+			#end
+			</div>
+			<div id="pullUp">
+				#if($list.size()==100)
+					更多信息请通过搜索功能获取
+				#else
+					已无更多数据
+				#end
+			</div>
+		</div>
+	</div>
+		<!-- suggest -->
+	<div class="fund-suggest">
+		<p class="search-jjtit">搜索建议</p>
+		<ul class="search-ssls"></ul>
+	</div>
+</section>
+
+</body>
+</html>
+#include("public/tongji.htm")

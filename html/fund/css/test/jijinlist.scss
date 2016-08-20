@@ -1,0 +1,160 @@
+.people { padding-top: 0; overflow: hidden;
+	/*基金列表页面*/
+	.people-top { width: 100%; z-index: 9; background-color: #f6f6f6; overflow: hidden; position: fixed; top: 45px; left: 0; }
+	.people-title { width: 100%; position: relative; font-size: 1.2rem; color: #fff; height: 50px; background-color: #f05a3c; line-height: 50px; text-align: center; }
+	/*	.people-title { 
+	.people-logo { width: 50px; height: 50px; position: absolute; top: 0px; left: 10px; }
+	.people-logo img { width: 50px; height: 50px; }
+	.people-s { display: block; }
+	.people-search { width: 61px; height: 54px; position: absolute; top: 5px; right: 10px; }
+	.people-search img { width: 30px; height: 26px; position: absolute; top: 7px; right: 10px; }
+		}*/
+	.people-menu { width: 100%; height: 60px; position: relative; background-color: #d3e4ed;
+		& dd { float: left; height: 60px; line-height: 60px; text-align: center; }
+		& dd:nth-of-type(1) { width: 46%; }
+		& dd:nth-of-type(2) { width: 24%; }
+		& dd:nth-of-type(3) { width: 30%; font-size: 12px; }
+	}
+	.people-con { position: relative; width: 100%; top: 90px;
+		& p { height: 20px; line-height: 20px; }
+		& p:nth-of-type(1) { font-size: 1rem }
+		& ul { display: block;
+			& li { width: 100%; height: 80px; position: relative; line-height: 80px; border-bottom: 1px solid #e8e8e8;
+				& dd { float: left; text-align: center; line-height: 80px; }
+				& dd:nth-of-type(1) { width: 30%; height: 80px; }
+				& dd:nth-of-type(2) { width: 14%; font-size: .8rem; color: #48637d; }
+				& dd:nth-of-type(3) { width: 14%; font-size: .8rem; }
+				& dd:nth-of-type(4) { width: 20%; font-size: .8rem; padding-top: 20px; }
+				& dd:nth-of-type(5) { width: 22%; font-size: .8rem; }
+			}
+			/*		.people-red { color: #48637d; }
+					.people-green { color: #3c9029; }*/ }
+			.people-icon { width: 45px; height: 45px; border-radius: 22.5px; position: absolute; top: 18px; left: 5px; }
+			.people-name { float: left; position: absolute; position: absolute; left: 55px; font-size: .8rem; top: -12px; text-transform: capitalize; }
+			.people-nt { position: absolute; left: 55px; top: 12px; color: #0b2c4b; font-size: .8rem; }
+		}
+		.jijinlist-menu { position: relative; height: 40px; background-color: #f6f6f6; font-weight: bold; border-bottom: 1px solid #edecec;
+			.listactive { border-bottom: 1px solid #d22929; color: #d22929; }
+			& ul { display: block; }
+			& li { width: 16.5%; height: 40px; float: left; text-align: center; line-height: 40px; font-size: .9rem; color: #626e82 }
+		}
+		.jijinlist-nav { position: relative; height: 35px; background-color: #fff; border-bottom: 1px solid #f6f6f6; color: #626e82; width: 100%; font-size: .7rem;
+			& ul { display: block; margin-top: 1px;
+				& li { float: left; height: 35px; line-height: 35px; text-align: center; }
+				& li:nth-of-type(1) { width: 48%; text-align: left; padding-left: 2%; }
+				& li:nth-of-type(2) { width: 22%; }
+				& li:nth-of-type(3) { width: 28%; }
+			}
+		}
+		.jijinlist-con { position: relative; padding-left: 2%; padding-top: 130px;
+			& ul { display: block; position: relative; width: 100%;
+				& li { height: 70px; position: relative; width: 100%; border-bottom: 1px solid #ebebeb; overflow: hidden; color: #626e82;
+					& dd { height: 70px; display: block; float: left; }
+					& dd:nth-of-type(1) { width: 50%; text-align: left; }
+					& dd:nth-of-type(2) { width: 25%; text-align: center; line-height: 70px; font-size: 1.1rem; font-weight: bold; }
+					& dd:nth-of-type(3) { width: 25%; text-align: center; /*padding-top: 10px; line-height: 22px; */ line-height: 45px;}
+					.jijinlist-tit { font-size: 0.9rem; margin-top: 13px; margin-bottom: 5px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 100%; }
+					.jijin-code { display: inline; position: relative; height: 18px; overflow: hidden;
+						.jianyi { padding: 1px 10px; float: left; border: 1px solid #eaeaea; text-align: center; font-size: 10px !important; border-radius: 10px; }
+						.jijinlist-count { float: left; width: auto; padding: 1px 10px; margin-left: 5px; font-size: .7rem; border: 1px solid #eaeaea; border-radius: 10px; }
+					}
+					.jijinlist-zcolor { color: #e65a0d; font-size: 1.02rem; font-weight: bold;line-height: 0px; }
+					.jijinlist-pj { font-size: .7rem; }
+				}
+			}
+		}
+		.currency-con { position: relative; padding-left: 2%; padding-top: 130px;
+			& ul { display: block; position: relative; width: 100%;
+				& li { height: 70px; position: relative; width: 100%; border-bottom: 1px solid #ebebeb; overflow: hidden; color: #626e82;
+					& dd { height: 70px; display: block; float: left; }
+					& dd:nth-of-type(1) { width: 50%; text-align: left; }
+					& dd:nth-of-type(2) { width: 25%; text-align: center; line-height: 25px; padding-top: 10px; font-size: 1.1rem; font-weight: bold; }
+					& dd:nth-of-type(3) { width: 25%; text-align: center; /*padding-top: 10px; line-height: 22px; */ line-height: 71px; color: #e65a0d; font-size: 1.02rem; font-weight: bold;}
+					.jijinlist-tit { font-size: 0.9rem; margin-top: 13px; margin-bottom: 5px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 100%; }
+					.jijin-code { display: inline; position: relative; height: 18px; overflow: hidden;
+						.jianyi { padding: 1px 10px; float: left; border: 1px solid #eaeaea; text-align: center; font-size: 10px !important; border-radius: 10px; }
+						.jijinlist-count { float: left; width: auto; padding: 1px 10px; margin-left: 5px; font-size: .7rem; border: 1px solid #eaeaea; border-radius: 10px; }
+					}
+					/*.jijinlist-zcolor { color: #e65a0d; font-size: 1.02rem; font-weight: bold;line-height: 0px; }*/
+					.jijinlist-pj { font-size: .7rem; font-weight: normal; }
+				}
+			}
+		}
+	}
+	/*基金列表详情页*/
+	.fund { width: 100%; position: relative; padding-top: 50px;
+		.detail-tclass { & ul { width: 320px; }
+		}
+		.fund-nav { width: 100%; position: relative;
+			& ul { width: 100%; height: auto; overflow: hidden; border-bottom: 2px solid #e4e4e4; padding: 15px 0;
+				& li { width: 20%; float: left; height: 45px; text-align: center; font-size: .8rem; line-height: 22px; }
+				& li:nth-of-type(4) { width: 40%; }
+				& li p:nth-of-type(1) { color: #f05a3c; }
+				& li p:nth-of-type(2) { color: #4e4c4c; }
+			}
+		}
+		.fund-company { position: relative; height: auto; overflow: hidden; }
+		.fund-con { position: relative; color: #454545; padding-left: 10px; padding-right: 10px; overflow: hidden; padding-bottom: 30px; font-size: .9rem; line-height: 1.4rem; border-bottom: 2px solid #e4e4e4;
+			.fund-dis { width: 100%; height: auto; overflow: hidden; }
+			.fund-conl { width: auto; float: left; display: inline; width: 80%; }
+			.ml-chiyou { float: right; width: 18%; color: #fff; line-height: 18px; padding-top: 10px; max-width: 160px; height: 50px; background-color: red; text-align: center; margin-top: 10px; margin-left: 5px; }
+			.ml-huan { float: right; width: 18%; color: #fff; line-height: 18px; padding-top: 10px; max-width: 160px; height: 50px; background-color: green; text-align: center; margin-top: 10px; margin-left: 5px; }
+		}
+		.fund-jl { height: 40px;
+			.fund-icon { width: 40px; height: 40px; position: absolute; left: 10px; border-radius: 40px; }
+			.fund-icon img { width: 40px; height: 40px; overflow: hidden; border-radius: 40px; }
+			.fund-n { position: absolute; left: 60px; }
+			.fund-txt { position: absolute; top: 20px; left: 60px; font-size: .8rem; }
+		}
+		.fund-t { position: relative; color: #f05a3c; font-size: .8rem; margin: 28px auto 5px 10px; }
+		.fund-table { width: 112%; position: relative; left: -20px; top: 10px;
+			& ul { position: relative; height: auto; width: 100%;
+				& li { height: 37px; font-size: .8rem; }
+				& li dl { width: 100%; height: 100%; }
+				& li dd { width: 20%; float: left; height: 100%; line-height: 30px; text-align: center; }
+				& li:nth-of-type(2n-1) { background-color: #f0f4f7; }
+			}
+		}
+		.pai { position: relative; width: 30px; height: 45px; margin: 0 auto; margin-top: 5px;
+			& ul { height: auto; width: 98%; border: 1px solid #f0f4f7;
+				& li { height: 10px; width: 100%; border-bottom: 1px solid #f0f4f7; }
+				& li:nth-of-type(2n-1) { background-color: #fff; }
+			}
+		}
+		.pai .youxliang { position: relative; width: 120%; }
+		.pai #y { background-color: #5a99ce; }
+		.pai #l { background-color: #5a99ce; }
+		.fund-risk { position: relative;
+			.fund-f { position: relative; width: 98%; margin: 0 auto; margin-top: 40px;
+				& li { width: 18%; margin: 0 1%; height: 27px; background-color: #000; float: left; font-size: .95rem; text-align: center; }
+				& li p { position: relative; top: 27px; }
+				& li:nth-of-type(1) { background-color: #5fe951; }
+				& li:nth-of-type(2) { background-color: #dcf357; }
+				& li:nth-of-type(3) { background-color: #ffef59; }
+				& li:nth-of-type(4) { background-color: #fab853; }
+				& li:nth-of-type(5) { background-color: #e54a46; }
+			}
+		}
+		.fund-risk .sanjiao { width: 0; position: relative; left: 50%; top: -40px; margin-left: -15px; z-index: 9; height: 0; border-left: 15px solid transparent; border-right: 15px solid transparent; border-top: 15px solid #5e5e5e; }
+	}
+	/*suggest*/ 
+	.fund-suggest { position: fixed; z-index: 99; background-color: #f6f6f6; top: 95px; display: none; padding-bottom: 10px;  width: 100%;overflow:auto;
+		.search-jjtit { width: 0px; height: 0px;/* background-color: #f2f2f2; text-align: center; line-height: 40px; position: relative;*/ overflow: hidden; }
+		& ul {font-size: .9rem; height: 100%; width: 100%; overflow:auto; display: block;
+			& li { width: 100%; height: 40px; text-align: left; line-height: 40px; border-bottom: 1px solid #d7d7d7 }
+			/*& li:nth-of-type(2n){ background-color: #faf8f8;}*/
+			& dl { float: left; width: 100%; }
+			& dd { float: left; }
+		}
+		& dd:nth-of-type(1) { width: 20%; padding-left: 5%; }
+		& dd:nth-of-type(2) { width: 55%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;  }
+		& dd:nth-of-type(3) { width: 20%; text-align: center; }
+	}
+	/*貨比*/
+	.jijinlist-huobif { line-height: 51px; color: #e65a0d; font-weight: bold; }
+	.jijinhuobi-tit{   font-size: 0.9rem;  line-height: 40px;  overflow: hidden;  white-space: nowrap;  text-overflow: ellipsis;  width: 100%; }
+ /*背景*/
+
+  .search-bg{ width: 100%; height: 100%; position: fixed; top: 95px; background: rgba(0,0,0,.6); z-index: 95; display: none;}
+  .jijinlist-zanwu{ line-height: 71px;}
+

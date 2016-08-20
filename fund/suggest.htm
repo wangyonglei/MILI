@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+#include("public/no-cache.htm")
+<title>基情 基金排行</title>
+<link rel="stylesheet" type="text/css" href="http://static.miliwealth.com/fund/css/common/common.css$!version">
+<link rel="stylesheet" type="text/css" href="http://static.miliwealth.com/fund/css/suggest/suggest.css$!version">
+</head>
+<body>
+#include("public/header.htm")
+    <section class="suggest-fund">
+        <div class="people-top">
+            <div class="people-search" id="people-search" >
+                <form class="people-searchf"  method="get">
+                    <input type="text" name="keyWord"  autocomplete="off"  value="$!query.keyWord" placeholder="请输入基金代码/首字母/名称" id="fund-search"/>
+                   
+                    <button  id="suggest-btn">确定</button>
+                </form>
+            </div>
+        </div>
+      <div id="wrapper">
+            <div id="scroller">
+                <div id="thelist" class="jijinlist-con">
+                        <div class="fund-suggest">
+                            <ul class="search-ssls"></ul>
+                        </div>
+                </div>
+             </div>
+       </div>
+    </section>
+    
+    
+   <section class="suggest-manager">
+        <div class="people-top">
+           <div class="people-search" id="people-search">
+                <form class="people-searchf" action="/fund/searchResult" method="post">
+                    <input type="text" name="keyWord" value="$!keyWord" placeholder="请输入基金经理姓名/首字母" id="manager-sug">
+                    <input type="hidden" name="type" value="$type"/>
+                    <button>确定</button>
+                </form>
+            </div>
+        </div>
+	    <div id="wrapper">
+	            <div id="scroller">
+	                <div id="thelist" class="jijinlist-con">
+				            <div id="manager-info">
+				                 <ul class="search-jjj"></ul>
+				            </div>
+	                </div>
+	             </div>
+	     </div>
+    </section>
+    
+    
+<script src="http://static.miliwealth.com/fund/code/jquery-1.8.0.min.js"></script>
+<script src="http://static.miliwealth.com/fund/code/iscroll.js"></script>
+<script src="http://static.miliwealth.com/fund/js/list/list.js$!version"></script>
+</body>
+</html>
+#include("public/tongji.htm")

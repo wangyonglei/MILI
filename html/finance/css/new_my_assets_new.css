@@ -1,0 +1,29 @@
+.wrap { width: 100%; height: 100%; background: #f2f2f2; }
+.names { width: 100%; height: 40px; }
+.title_list1 { float: left; padding-top: 10px; margin-left: 7.5%; font-size: 16px; }
+.title_list2 { float: left; padding-top: 10px; font-size: 16px; }
+.title_list3 { float: right; padding-right: 30px; padding-top: 2px; }
+.money_list1 { float: right; padding-right: 30px; padding-top: 10px; }
+.tishi { width: 100%; height: 20px; line-height: 20px; text-align: center; color: #c47d0e; background: #ffcc00; }
+.banner { width: 100%; height: 128px; background: #fe5a00; }
+.title { width: 300px; height: 30px; margin-left: 7.5%; line-height: 30px; font-size: 12px; color: #fff; }
+.money { width: 300px; height: 50px; margin-left: 7.5%; line-height: 50px; font-size: 50px; color: #fff; }
+.list { width: 100%; height: 60px; background: #fff; margin-bottom: 9px; }
+.title_list { width: 60px; height: 40px; float: left; line-height: 60px; color: #878787; margin-left: 7.5%; }
+.money_list { width: auto; height: 60px; float: left; line-height: 60px; color: #fe5a00; font-size: 14px; }
+.weihu { width: auto; height: 40px; float: left; line-height: 40px; color: #35d6ff; font-size: 12px; }
+.btns { width: 100%; height: 60px; background: #fff; margin-bottom: 9px; }
+.left { width: 50%; height: 60px; float: left; }
+.left_title { width: auto; height: 35px; line-height: 35px; margin-left: 15%; color: #878787; }
+.right_title { width: auto; height: 20px; margin-left: 15%; color: #878787; }
+.left_money { color: #fe5a00; }
+.line { width: 1px; height: 22px; float: left; margin-top: 29px; background: #e4e4e4; }
+.right { width: 45%; height: 60px; float: right; }
+.btns1 { width: 85px; height: 24px; line-height: 24px; text-align: center; margin-top: 26px; color: #FFA600; border-radius: 5px; border: 1px solid #FFA600; border-radius: 3px; }
+.btns2 { width: 100px; height: 30px; line-height: 30px; text-align: center; margin-top: 26px; color: #878787; }
+.footer { width: 85%; height: 48px; margin: 30px auto 0; }
+.footer p1 { width: 46%; height: 48px; text-align: center; float: left; line-height: 48px; color: #FFA600; border-radius: 5px; border: 1px solid #FFA600; font-size: 22px; }
+.footer p2 { width: 46%; height: 48px; text-align: center; float: left; line-height: 48px; color: #fff; background: #fe5a00; border-radius: 5px; font-size: 22px; }
+.footer p3 { float: left; width: 4%; height: 48px; }
+.nav { width: 100%; height: 50px; position: fixed; left: 0; bottom: 0; }
+.nav ul li { width: 50%; height: 50px; line-height: 50px; text-align: center; float: left; background: #fff; }

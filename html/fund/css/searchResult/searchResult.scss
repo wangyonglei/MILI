@@ -1,0 +1,72 @@
+.searchResult{
+.search-tit { width: 100%; height: 50px; background-color: #f5f5f5; position: relative; text-indent: 1rem; line-height: 50px; }
+	.search-nav { position: relative; height: 35px; background-color: #fff; border-bottom: 1px solid #f6f6f6; color: #626e82; width: 100%; font-size: .7rem;
+	& ul { display: block; margin-top: 1px;
+		& li { float: left; height: 35px; line-height: 35px; text-align: center; }
+		& li:nth-of-type(1) { width: 48%; text-align: left; padding-left: 2%; }
+		& li:nth-of-type(2) { width: 25%; }
+		& li:nth-of-type(3) { width: 25%; }
+	}
+}
+.search-con { position: relative; padding-left: 2%;
+	& ul { display: block; position: relative; width: 100%;
+		& li { height: 70px; position: relative; width: 100%; border-bottom: 1px solid #ebebeb; overflow: hidden; color: #626e82;
+			& dd { height: 70px; display: block; float: left; }
+			& dd:nth-of-type(1) { width: 50%; text-align: left; }
+			& dd:nth-of-type(2) { width: 25%; text-align: center; line-height: 70px; font-size: 1.1rem; font-weight: bold; }
+			& dd:nth-of-type(3) { width: 25%; text-align: center; padding-top: 10px; line-height: 22px; }
+			.jijinlist-tit { font-size: 0.9rem; margin-top: 10px; margin-bottom: 5px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 100%; }
+			.jijin-code { display: inline; position: relative; height: 18px; overflow: hidden;
+				.jianyi { padding: 1px 10px; float: left; border: 1px solid #eaeaea; text-align: center; font-size: 10px !important; border-radius: 10px; }
+				.jijinlist-count { float: left; width: auto; padding: 1px 10px; margin-left: 5px; font-size: .7rem; border: 1px solid #eaeaea; border-radius: 10px; }
+			}
+			.jijinlist-zcolor { color: #e65a0d; font-size: 1.02rem; font-weight: bold; }
+			.jijinlist-pj { font-size: .7rem; }
+		}
+	}
+}	.currency-con { position: relative; padding-left: 2%;
+			& ul { display: block; position: relative; width: 100%;
+				& li { height: 70px; position: relative; width: 100%; border-bottom: 1px solid #ebebeb; overflow: hidden; color: #626e82;
+					& dd { height: 70px; display: block; float: left; }
+					& dd:nth-of-type(1) { width: 50%; text-align: left; }
+					& dd:nth-of-type(2) { width: 25%; text-align: center; line-height: 25px; padding-top: 10px; font-size: 1.1rem; font-weight: bold; }
+					& dd:nth-of-type(3) { width: 25%; text-align: center; /*padding-top: 10px; line-height: 22px; */ line-height: 71px; color: #e65a0d; font-size: 1.02rem; font-weight: bold;}
+					.jijinlist-tit { font-size: 0.9rem; margin-top: 13px; margin-bottom: 5px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 100%; }
+					.jijin-code { display: inline; position: relative; height: 18px; overflow: hidden;
+						.jianyi { padding: 1px 10px; float: left; border: 1px solid #eaeaea; text-align: center; font-size: 10px !important; border-radius: 10px; }
+						.jijinlist-count { float: left; width: auto; padding: 1px 10px; margin-left: 5px; font-size: .7rem; border: 1px solid #eaeaea; border-radius: 10px; }
+					}
+					/*.jijinlist-zcolor { color: #e65a0d; font-size: 1.02rem; font-weight: bold;line-height: 0px; }*/
+					.jijinlist-pj { font-size: .7rem; font-weight: normal; }
+				}
+			}
+		}.manager-nav { position: relative; height: 35px; background-color: #fff; border-bottom: 1px solid #f6f6f6; width: 100%; font-size: .7rem;
+	& ul { display: block; margin-top: 1px; height: auto; overflow: hidden;
+		& li { float: left; height: 35px; line-height: 35px; text-align: center; }
+		& li:nth-of-type(1) { width: 45%; overflow: hidden; }
+		& li:nth-of-type(2) { width: 20%; }
+		& li:nth-of-type(3) { width: 35%; }
+	}
+}.manager-con { position: relative; width: 100%;  height: auto; display: block;
+
+	& a { width: 100%; display: block; height: 71px; }
+	& p { height: 20px; line-height: 20px; }
+	& p:nth-of-type(1) { font-size: 1rem }
+	& li { width: 100%; position: relative; line-height: 70px; height: auto; overflow: hidden;
+	
+		/* border-bottom: 1px solid #e8e8e8;*/
+		& dl{ width: 100%; height: 100%; overflow: hidden;}
+		& dd { float: left; text-align: center; }
+		& dd:nth-of-type(1) { width: 45%; height: 70px;/*border-bottom: 1px solid #e8e8e8;*/ }
+		& dd:nth-of-type(2) { width: 20%; text-align: center; font-size: 1.1rem; font-weight: bold; border-bottom: 1px solid #e8e8e8; height: 70px; }
+		& dd:nth-of-type(3) { width: 35%; color: #e65a0d; font-size: 1.02rem; height: 70px; font-weight: bold; border-bottom: 1px solid #e8e8e8; }
+	}
+	.man-icon { height: 70px; float: left; margin-top: 18px; }
+	.manager-icon { width: 40px; height: 40px; border-radius: 22px; }
+	.manager-left { border-bottom: 1px solid #e8e8e8; height: 70px; left: 52px; position: relative; /*width: 100%;*/width: 70%; }
+	.manager-name { color: #0b2c4b; float: left; position: absolute; font-size: .95rem; top: -8px; text-transform: capitalize; }
+	.manager-nt { position: absolute; top: 13px; height: 58px; color: #0b2c4b; text-align: left; font-size: .7rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 70%; }
+}
+#wrapper { padding-top: 0; top: 0; }
+	.search-more { text-align: center; height: 20px; margin: 20px; position: relative; font-size: .93rem; }
+}

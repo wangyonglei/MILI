@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+#include("public/no-cache.htm")
+<meta name="keywords" content="基金搜索,基金查找" />
+<meta name="description" content="基金搜索" />
+<title>基情 搜索结果</title>
+<link rel="stylesheet" type="text/css"
+	href="http://static.miliwealth.com/fund/css/common/common.css$!version">
+<link rel="stylesheet" type="text/css"
+	href="http://static.miliwealth.com/fund/css/searchResult/searchResult.css$!version">
+</head>
+<body>
+	<section class="searchResult">
+		#include("public/header.htm")
+		<div class="search-tit">非货币基金“$!keyWord”搜索结果</div>
+		<div class="search-nav">
+			<ul>
+				<li>基金名称</li>
+				<li>基情评分</li>
+				<li>近一年</li>
+			</ul>
+		</div>
+		<div class="search-con">
+		#set($Double= 0.0)
+		#if($listSize > 0)
+			#foreach($item in $list)
+			<ul>
+				<a href="/fund/fundDetail?sid=$item.sid">
+					#set($score = $!numberTool.format("#0.0", $item.yieldRate.score))
+					#if($score)
+						#set($score = $Double.parseDouble($score))
+					#end
+					<li>
+						<dl>
+							<dd>
+								<div class="jijinlist-tit">$item.name</div>
+								<div class="jijin-code">
+								#if($score)
+									<div class="jianyi red">
+									#if($score <= 7.5)
+										建议转换
+									#elseif($score > 7.5 && $score <= 8.5)
+										继续观望
+									#elseif($score > 8.5)
+										建议持有
+									#end
+									</div>
+								#end
+								
+								#if($item.fundType == 1)
+									<div class="jijinlist-count">$!{item.code}</div>
+								#end
+								</div>
+							</dd>
+							<dd>
+							$scoreTool.get($item.yieldRate.score)
+							</dd>
+							<dd>
+								<p class="jijinlist-pj">$!{item.yieldRate.dataDate}</p>
+								#if($item.yieldRate.nearly1Year)
+								<p class="jijinlist-zcolor">
+									$numberTool.format("#0.00", $item.yieldRate.nearly1Year)<span class="jijinlist-bai">%</span>
+								</p>
+								#end
+							</dd>
+						</dl>
+					</li>
+				</a>
+			</ul>
+			#end
+			<div class="search-more">
+				<a href="/fund/list?investType=1&keyWord=$!keyWord">更多···</a>
+			</div>
+		#else
+			<div class="search-more">
+				<a href="/fund/list?investType=1">暂无内容，查看列表</a>
+			</div>
+		#end
+			
+		</div>
+		<div class="search-tit">货币基金“$!keyWord”搜索结果</div>
+		<div class="search-nav">
+			<ul>
+				<li>基金名称</li>
+				<li>7日年化</li>
+				<li>周年化</li>
+			</ul>
+		</div>
+		<div class="currency-con">
+			#if($currencySize > 0)
+				#foreach($item in $currency)
+				<ul>
+					#set($score = $!numberTool.format("#0.0", $item.yieldRate.score))
+					<li>
+						<dl>
+							<dd>
+								<div class="jijinlist-tit">$item.name</div>
+								<div class="jijin-code">
+									<div class="jijinlist-count">$!{item.code}</div>
+								</div>
+							</dd>
+							<dd><p class="jijinlist-pj">$!{item.yieldRate.dataDate}
+                                </p>
+                               <p> $!numberTool.format("#0.00",$!{item.fundNetValue.unitNv})%</p></dd>
+							<dd>
+								
+							
+									$!numberTool.format("#0.00",$!{item.yieldRate.score})<span class="jijinlist-bai">%</span>
+								
+							</dd>
+						</dl>
+					</li>
+				</ul>
+				#end
+				<div class="search-more">
+					<a href="/fund/currency?keyWord=$!keyWord">更多···</a>
+				</div>
+			#else
+				
+				<div class="search-more">
+					<a href="/fund/currency">暂无内容，查看列表</a>
+				</div>
+			#end
+			
+		</div>
+		<div class="search-tit">基金经理“$!keyWord”搜索结果</div>
+		<div class="manager-nav">
+			<ul>
+				<li>姓名</li>
+				<li>基情评分</li>
+				<li>生涯年化回报率</li>
+			</ul>
+		</div>
+		<div class=" manager-con">
+		#if($managerSize > 0)
+			#foreach($item in $manager)
+			<ul id="content">
+				<a href="/fund/managerDetail?sid=$item.sid">
+					<li>
+						<dl>
+							<dd>
+								<div class="man-icon">
+								#set($jpg=".jpg")
+								<img class="manager-icon" alt="$!item.name" src="http://static.miliwealth.com/avatar/$!{item.id}$jpg?sex=$!{item.sex}"></div>
+								<div class="manager-left"><div class="manager-name">$item.name</div>
+								<div class="manager-nt">$!item.company.name</div></div>
+							</dd>
+							<dd>
+							
+							#if($item.yieldRate.equityScore) 
+								#set ($score = $!{item.yieldRate.equityScore})
+							#elseif($item.yieldRate.bondScore) 
+								#set ($score = $!{item.yieldRate.bondScore})
+							#else
+								#set ($score = $!{item.yieldRate.qdiiScore})
+							#end
+							<span class="budao">$scoreTool.get($score)</span>
+							</dd>
+							<dd>
+								<span class="red">
+								#if($item.yieldRate.returnProportionEquity)
+									$numberTool.format("#0.00",$item.yieldRate.returnProportionEquity)<span class="jijinlist-bai">%</span>
+								#else
+								<span class="budao">暂无</span>
+								#end
+								</span>
+							</dd>
+						</dl>
+					</li>
+				</a>
+			</ul>
+			#end
+			<div class="search-more">
+				<a href="/fund/manager?type=1&keyWord=$!keyWord">更多···</a>
+			</div>
+			#else
+				<div class="search-more">
+				<a href="/fund/manager?type=1">暂无内容，查看列表</a>
+			</div>
+			#end
+			
+		</div>
+	</section>
+
+</body>
+</html>
+#include("public/tongji.htm")

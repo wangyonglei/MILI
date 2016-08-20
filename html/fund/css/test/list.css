@@ -1,0 +1,186 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+p, h1, span, section, input, ul, li {
+  margin: 0;
+  padding: 0; }
+
+a, input, button {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+  outline: none;
+  border: 0; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-family: "微软雅黑";
+  background-color: #efeff4; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+a:link {
+  color: #000; }
+
+a:visited {
+  color: #000; }
+
+a:hover {
+  color: #000; }
+
+a:active {
+  color: #000; }
+
+/*list*/
+.list {
+  position: relative;
+  top: 0;
+  padding: 0; }
+  .list .list-top {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #49a7f6;
+    color: #fff;
+    font-size: .9rem; }
+  .list .list-s {
+    margin-top: 8px;
+    padding-bottom: 30px;
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    height: auto;
+    overflow: hidden; }
+    .list .list-s .list-tit {
+      width: 90%;
+      position: relative;
+      left: 10%;
+      height: 56px;
+      line-height: 56px;
+      border-bottom: 1px solid #eaeaea;
+      position: relative;
+      color: #696868;
+      font-size: 1rem; }
+    .list .list-s .list-shouyi {
+      width: 100%;
+      text-align: center;
+      position: relative; }
+      .list .list-s .list-shouyi .list-sy1 {
+        font-size: 2.7rem;
+        width: 100%;
+        line-height: 70px;
+        padding-top: 5px;
+        color: #ff5900; }
+      .list .list-s .list-shouyi .list-sy2 {
+        color: #696868;
+        font-size: .8rem; }
+      .list .list-s .list-shouyi .list-sy3 {
+        color: #ff5900;
+        font-size: .95rem;
+        line-height: 45px; }
+    .list .list-s .list-syimg {
+      width: 100%;
+      height: 100px;
+      position: relative;
+      margin-bottom: 13px;
+      position: relative;
+      left: 50%;
+      margin-left: -50%; }
+      .list .list-s .list-syimg img {
+        width: 100%;
+        min-width: 60px;
+        max-width: 90px; }
+      .list .list-s .list-syimg ul {
+        width: 100%;
+        height: 100px;
+        margin: 0 auto;
+        margin-top: 5px; }
+        .list .list-s .list-syimg ul li {
+          width: 14%;
+          float: left;
+          margin: 0 3%; }
+        .list .list-s .list-syimg ul li:nth-of-type(4) {
+          font-size: 5rem;
+          line-height: 70px;
+          color: #959595;
+          width: 14%; }
+    .list .list-s .list-bm {
+      height: 67px;
+      line-height: 67px;
+      border-top: 1px solid #eaeaea;
+      width: 90%;
+      position: relative;
+      left: 10%; }
+      .list .list-s .list-bm .list-bmp {
+        text-align: center;
+        left: -5%;
+        position: relative;
+        font-size: .95rem; }
+    .list .list-s .list-juse {
+      color: #ff5900; }
+    .list .list-s .list-buy {
+      width: 80%;
+      height: 50px;
+      background-color: #ff5900;
+      border-radius: 5px;
+      position: relative;
+      left: 50%;
+      margin-left: -40%; }
+      .list .list-s .list-buy .list-qbuy {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: #fff;
+        line-height: 50px;
+        font-size: 1.4rem; }
+    .list .list-s .list-y {
+      color: #696868;
+      float: right;
+      font-size: 2rem;
+      margin-right: 22px; }
+
+/*基金suggest*/
+.fund-suggest {
+  position: relative;
+  display: none;
+  padding-bottom: 10px;
+  width: 100%;
+  overflow: auto;
+  background-color: #f6f6f6; }
+  .fund-suggest ul {
+    font-size: .9rem;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    display: block; }
+    .fund-suggest ul li {
+      width: 100%;
+      height: 40px;
+      text-align: left;
+      line-height: 40px;
+      border-bottom: 1px solid #d7d7d7; }
+    .fund-suggest ul dl {
+      float: left;
+      width: 100%; }
+    .fund-suggest ul dd {
+      float: left; }
+  .fund-suggest dd:nth-of-type(1) {
+    width: 20%;
+    padding-left: 5%;
+    height: 40px;
+    display: block; }
+  .fund-suggest dd:nth-of-type(2) {
+    width: 55%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+  .fund-suggest dd:nth-of-type(3) {
+    width: 20%;
+    text-align: center; }

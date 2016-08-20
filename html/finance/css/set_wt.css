@@ -1,0 +1,14 @@
+.wrap_income { width: 100%; height: 100%; background: #fff; }
+.top { width: 100%; height: 38px; background: #fff; border-bottom: 1px solid #ccc; }
+.top ul li { float: left; width: 49%; height: 38px; text-align: center; line-height: 38px; color: #666; }
+.top ul li a { font-size: 14px; }
+.ons a { color: #fb957c; }
+.mainbox { width: 100%; height: 111px; background: #fff; border-bottom: 1px solid #ccc; }
+.title_main { width: 100%; height: 33px; line-height: 33px; text-align: center; color: #fc967b; font-size: 30px; }
+.nav { width: 100%; height: 50px; position: fixed; left: 0; bottom: 0; }
+.nav ul li { width: 50%; height: 50px; line-height: 50px; text-align: center; float: left; background: #fff; }
+.on a { color: #fb957c; }
+.list_box { clear: both; width: 100%; height: 35px; border-bottom: 1px solid #ccc; background: #fff; }
+.left_title { width: 230px; height: 35px; float: left; line-height: 35px; color: #666666; font-size: 14px; }
+.right_main { width: 60px; height: 35px; line-height: 35px; float: right; text-align: right; overflow: hidden; color: #d7d5d6; }
+.xiangxineirong { width: 100%; height: auto; line-height: 20px; background: #fafafa; color: #808080; font-size: 14px; }

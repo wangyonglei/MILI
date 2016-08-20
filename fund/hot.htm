@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	#include("public/no-cache.htm")
+	<meta name="keywords" content="基金,热点板块" />
+	<meta name="description" content="基金热点板块" />
+    <title>基情 热点板块</title>
+    <link rel="stylesheet" type="text/css" href="http://static.miliwealth.com/fund/css/common/common.css$!version"></head>
+    <link rel="stylesheet" type="text/css" href="http://static.miliwealth.com/fund/css/hot/hot.css$!version"></head>
+<body>
+    <section class="search">
+        #include("public/header.htm")
+        <div class="people-top">
+     		<div class="people-search" id="people-search">
+		        <form class="people-searchf" action="/fund/searchResult" method="get">
+		            <input type="text" class="inputText" name="keyWord"  placeholder="请输入搜索内容" autofocus="false"  id="mi-search">
+		            <button>
+		                <a href="javascript:;">
+		                    <span class="milindex-ss  icon-search">确定</span>
+		                </a>
+		            </button>
+		        </form>
+    		</div>
+        </div>
+        <!--选项卡begin-->
+        <div  class="mi-search">
+            <!--搜索标题-->
+            <ul id="mi-searchtab">
+                <li><a href="#" class="selected">热搜主题</a></li>
+                <li><a href="#" class="">热搜基金</a></li>
+                <li><a href="#" class="">热搜基金经理</a></li>
+            </ul>
+            <!--搜索内容选项-->
+            <div id="menu_con">
+                <div class="tag" style="display:block">
+                    <ul>
+                        <a href="/fund/theme?themeId=32"><li>国资改革</li></a>
+                        <a href="/fund/theme?themeId=31"><li>移动互联</li></a>
+                        <a href="/fund/theme?themeId=22"><li>医药行业</li></a>
+                        <a href="/fund/theme?themeId=25"><li>航天军工</li></a>
+                        <a href="/fund/theme?themeId=30"><li>环保概念</li></a>
+                        <a href="/fund/list?investType=5"><li>保本</li></a>
+                    </ul>
+                </div>
+                
+                <div class="tag"  style="display:none">
+                    <ul>
+                    	#foreach($fund in $fundList)
+                        <a href="/fund/fundDetail?sid=$!{fund.sid}"><li>$!{fund.name}</li></a>
+                        #end
+                    </ul>
+                </div>
+                <div class="tag" style="display:none">
+                    <ul>
+                    	#foreach($manager in $managerList )
+                        <a href="/fund/managerDetail?sid=$!{manager.sid}"><li>$!{manager.name}</li></a>
+                        #end
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--选项卡部分end-->
+		<div class="search-more">
+			<!-- <a href="search-more.html">更多···</a>  -->
+		</div>
+		<!-- 搜索页面筛选 -->
+    <div class="search-sx">
+        <h1 class="search-sxtit">筛选条件</h1>
+        <div  class="search-sxform">
+            <ul>
+                <li>
+                    <select class="search-sel"  id="select1">
+                    	<option value="#" selected="selected">风格基金</option>
+                        <option value="/fund/theme?themeId=11">大盘成长</option>
+                        <option value="/fund/theme?themeId=12">大盘平衡</option>
+                        <option value="/fund/theme?themeId=13">大盘价值</option>
+                        <option value="/fund/theme?themeId=14">中盘成长</option>
+                        <option value="/fund/theme?themeId=15">中盘平衡</option>
+                        <option value="/fund/theme?themeId=16">中盘价值</option>
+                        <option value="/fund/theme?themeId=17">小盘成长</option>
+                        <option value="/fund/theme?themeId=18">小盘平衡</option>
+                        <option value="/fund/theme?themeId=19">小盘价值</option>
+                    </select>
+                </li>
+                <li>
+                    <select class="search-sel" id="select2">
+                    	<option value="#" selected="selected">主题基金</option>
+                        <option value="/fund/theme?themeId=20">内需主题</option>
+                        <option value="/fund/theme?themeId=21">消费主题</option>
+                        <option value="/fund/theme?themeId=22">医药行业</option>
+                        <option value="/fund/theme?themeId=23">房地产</option>
+                        <option value="/fund/theme?themeId=24">高端制造</option>
+                        <option value="/fund/theme?themeId=25">航天军工</option>
+                        <option value="/fund/theme?themeId=26">新兴产业</option>
+                        <option value="/fund/theme?themeId=37">信息产业</option>
+                        <option value="/fund/theme?themeId=27">新能源</option>
+                        <option value="/fund/theme?themeId=28">新材料</option>
+                        <option value="/fund/theme?themeId=29">科技主题</option>
+                        <option value="/fund/theme?themeId=30">环保概念</option>
+                        <option value="/fund/theme?themeId=31">移动互联</option>
+                        <option value="/fund/theme?themeId=32">国资改革</option>
+                        <option value="/fund/theme?themeId=33">重组概念</option>
+                        <option value="/fund/theme?themeId=34">养老基金</option>
+                        <option value="/fund/theme?themeId=35">黄金基金</option>
+                        <option value="/fund/theme?themeId=36">大宗商品</option>
+                        <option value="/fund/theme?themeId=39">有色板块</option>
+                        <option value="/fund/theme?themeId=42">农业板块</option>
+                        <option value="/fund/theme?themeId=40">券商板块</option>
+                        <option value="/fund/theme?themeId=43">银行板块</option>
+                        <option value="/fund/theme?themeId=44">保险板块</option>
+                        <option value="/fund/theme?themeId=41">创业板</option>
+                    </select>
+                </li>
+                <li>
+                    <select class="search-sel" id="select3">
+                    	<option value="#" selected="selected">风格债基</option>
+                        <option value="/fund/theme?themeId=72">一级债基</option>
+                        <option value="/fund/theme?themeId=73">二级债基</option>
+                        <option value="/fund/theme?themeId=74">信用债基</option>
+                        <option value="/fund/theme?themeId=75">高等级信用债基</option>
+                        <option value="/fund/theme?themeId=76">企业债基</option>
+                        <option value="/fund/theme?themeId=78">利率债基</option>
+                        <option value="/fund/theme?themeId=77">城投债基</option>
+                        <option value="/fund/theme?themeId=6">母基金</option>
+                        <option value="/fund/theme?themeId=7">分级进取型</option>
+                        <option value="/fund/theme?themeId=8">分级保守型</option>
+                    </select>
+                </li>
+                <li>
+                    <select class="search-sel" id="select4">
+                        <option value="#" selected="selected" onchange="select4('parent',this,0)">主题QDII</option>
+                        <option value="/fund/theme?themeId=87">互联网</option>
+                        <option value="/fund/theme?themeId=88">商品</option>
+                        <option value="/fund/theme?themeId=80">黄金</option>
+                        <option value="/fund/theme?themeId=23">房地产</option>
+                        <option value="/fund/theme?themeId=81">中国概念</option>
+                        <option value="/fund/theme?themeId=82">美股</option>
+                        <option value="/fund/theme?themeId=85">港股</option>
+                        <option value="/fund/theme?themeId=83">新兴市场</option>
+                        <option value="/fund/theme?themeId=84">环球</option>
+                        <option value="/fund/theme?themeId=86">海外债券</option>
+                    </select>
+                </li> 
+            </ul>
+        </div>
+    </div>
+    <!-- 聚焦 -->
+    <div class="search-jj">
+        <p class="search-jjtit">搜索历史</p>
+        <ul class="search-ssls">
+        </ul>
+        <!-- <p class="search-jjtit">基金经理</p> -->
+        <ul class="search-jjjl"></ul>
+    </div>
+    <!-- 搜索建议 -->
+    <div class="search-ssjy">
+        <div id="wrapper">
+            <div id="scroller">
+				<ul class="search-ssls"></ul>
+           </div>
+        </div>
+    </div>
+</section>
+<script language="JavaScript" src="http://static.miliwealth.com/fund/code/jquery-1.8.0.min.js"></script>
+<script language="JavaScript" src="http://static.miliwealth.com/fund/code/iscroll.js"></script>
+<script language="JavaScript" src="http://static.miliwealth.com/fund/js/search/search.js$!version"></script>
+</body>
+</html>
+#include("public/tongji.htm")

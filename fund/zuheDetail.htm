@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	#include("public/no-cache.htm")
+	<meta name="keywords" content="基金组合,绝对回报,稳健,积极" />
+	<meta name="description" content="推荐基金组合" />
+	<title>基情 组合详情</title>
+	<link href="http://static.miliwealth.com/fund/css/common/common.css" rel="stylesheet" />
+	<link href="http://static.miliwealth.com/fund/css/zuheDetail/zuheDetail.css" rel="stylesheet" />
+</head>
+<body>
+<script>
+var szData = $szData
+var selfData = $selfData
+var imgData = $imgData
+var code = "g_$!zuhe"
+var scode = "$!zuhe"
+var sid = '$!{sids}'
+</script>
+	#include("public/header.htm")
+	<section class="zuheDetail">
+		<div class="zuhe-detailtop">
+			#if($zuhe == "jiji")
+			<p>基情积极组合</p>
+			<p>搏高收益 | 波动性大</p>
+			#elseif($zuhe == "wenjian")
+			<p>基情稳健组合</p>
+			<p>兼顾收益风险 | 波动性中等</p>
+			#else
+			<p>基情绝对回报组合</p>
+			<p>绝对回报 | 波动性小</p>
+			#end
+			<div class="zuhe-duibi" id="zuhe-duibi"><a href="javascript:;">+<p id="detail-duibi-tj"> 添加对比</p></a></div>
+		</div>
+            <div class="fund-biaoxian">
+                <div class="fund-t fund-tcenter">历史模拟</div>
+                <div class="fund-trend fund-con " id="tab">
+                    <!-- tab标签代码begin -->
+                    <div id="tab_menu">
+                        <ul>
+                            <li id="onemonth">一月</li>
+                            <li id="quarter">一季</li>
+                            <li id="halfyear">半年</li>
+                            <li id="oneyear"  class="selected">一年</li>
+                        </ul>
+                    </div>
+                    <div id="tab_box">
+                        <div id="main" class="fund-trend"></div>
+                    </div>
+                    <!-- tab标签代码end -->
+                </div>
+            </div>
+        <div class="fund-rose">
+            <div class="fund-t">配置详情</div>
+            <div class="zuhedetail-con">
+                <div class="zuhedetail-img" id="detail-img"></div>
+                <div class="zuhedetail-contit">
+                    <ul>
+                        <li>基金名称</li>
+                        <li>基金类型</li>
+                        <li>基金经理</li>
+                        <li>配置占比</li>
+                    </ul>
+                </div>
+                <div  class="zihedetail-conul">
+                    <ul>
+                    #foreach($item as $list)
+                        <li>
+                            <dl>
+                                <dd>
+                                    <span class="zuhe-detfk"></span>
+                                    <a href="/fund/fundDetail?sid=$!item.fundSid">
+                                    <p>$!item.fundName</p>
+                                    <p>
+                                        $!item.fundCode |
+                                        <span class="red">$!numberTool.format("#0.0",$!item.fundScore)分</span>
+                                    </p>
+                                    </a>
+                                </dd>
+                                <dd>$!item.investType.name</dd>
+                                <dd> 
+                                    <a href="/fund/managerDetail?sid=$!{item.fundManagerSid}&investTypeGroup=$!{item.investType.group.value}">
+                                    $!{item.fundManagerName} |
+                                    <span class="red">
+                                        #if($item.investType.value == 1)
+                                            $!numberTool.format("#0.0",$!{item.equityScore})分
+                                        #elseif($item.investType.value == 2)
+                                            $!numberTool.format("#0.0",$!{item.bondScore})分
+                                        #else
+                                            $!numberTool.format("#0.0",$!{item.qdiiScore})分
+                                        #end
+                                    </span>
+                                    </a>
+                                </dd>
+                                <dd>$!item.percent%</dd>
+                            </dl>
+                        </li>
+                    #end
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="fund-rose">
+            <div class="fund-t">推荐逻辑</div>
+            <div class="fund-con ">
+                #if($zuhe == "jiji")
+                如果您想搏取高收益；您运用的是长线资金（1年以内不会用）；您的心里承受能力很强，能够承受较大的收益波动；或者您判断股市已处于底部区域，对于下一步股市走势很乐观，您可以选择上面的积极组合。
+                #elseif($zuhe == "wenjian")
+                如果您想赚钱，能冒一点风险，但又不愿承受很大的收益波动；您运用的是中线资金（1年内可能会用到，但概率不大）；或者您判断下一步股市有一定的机会，或者您相信好的基金经理在熊市中也能给您挣到钱，您可以选择上面的稳健组合。
+                #else
+                如果您追求长期、稳定的绝对回报；您运用的是短线资金（1年内很可能会用）；您不愿承受较大的收益波动；或者您对下一步股市走势不看好，您可以选择上面的绝对回报组合。
+                #end
+            </div>
+        </div>
+        <div class="fund-manager">
+            <div class="fund-t">调仓记录</div>
+            <div class="zuhe-maimai">
+            暂无
+            </div>
+        </div>
+        <div class="listduibi"><a href="/fundcompare/list">对比<p id="duibinum"></p></a></div>
+    </section>
+    <script language="JavaScript" src="http://static.miliwealth.com/fund/code/jquery-1.8.0.min.js"></script>
+    <script src="http://static.miliwealth.com/fund/js/like/like.js$!version"></script>
+    <script src="http://static.miliwealth.com/fund/trend/dist/echarts.js"></script>
+    <script src="http://static.miliwealth.com/fund/js/common/unixtoDate.js$!version"></script>
+    <script src="http://static.miliwealth.com/fund/js/zuhedetail/zuhedetail.js$!version"></script>
+    <script src="http://static.miliwealth.com/fund/code/cookie.js$!version"></script>
+    <script src="http://static.miliwealth.com/fund/js/zuhedetail/zuheduibi.js$!version"></script>
+    <script src="http://static.miliwealth.com/fund/js/common/fundbuy.js$!version"></script>
+    
+</body>
+</html>
+#include("public/tongji.htm")

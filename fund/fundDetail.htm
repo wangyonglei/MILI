@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+#include("public/no-cache.htm")
+<meta name="keywords" content="$!{fund.name},$!{fund.company.name}" />
+<meta name="description" content="$!companyPerformance" />
+<title>基情 基金详情</title>
+<link href="http://static.miliwealth.com/fund/css/common/common.css?$!version"
+	rel="stylesheet" />
+<link href="http://static.miliwealth.com/fund/css/fundDetail/fundDetail.css$!version"
+	rel="stylesheet" />
+</head>
+#set($Double= 0.0)
+#set($formatStr="#0.00")
+
+<script>
+var szData = $szCloseJson
+var selfData = $selfJson  
+var code = 'f_$!{fund.sid}'
+var sid = '$!{fund.sid}'
+var riskData = $!{riskData}
+</script>
+<body>
+	#include("public/header.htm")
+	<section class="fundDetail">
+		<div class="fund-detail-head">
+			<h1 class="fund-detail-title">
+
+				$!{fund.investType.shortName}
+				<span class="shu-gang">|</span> 
+				$!fund.name 
+				#if($fund.fundType.value() == 1)
+				($!fund.code)
+				#end
+
+			</h1>
+			<div class="fund-detail-tag">
+			$!{fund.fundType.getName()}<span class="shu-gang">|</span>
+				#if($tagList)
+					#set ($tagListSize = $tagList.size())
+					#foreach($tag in $tagList)
+						$tag.name
+						#if($velocityCount != $tagListSize)
+						<span class="shu-gang">|</span>
+						#end
+					#end
+				#end
+			</div>
+			<div class="fundDetail-x bgclass">基情评分</div>
+			<div class="detail-score color-fen">
+				$scoreTool.get($fund.yieldRate.score)
+				<!-- <span class="detail-fen">分</span> -->
+				 <div class="detail-duibi" id="detail-duibi"><a href="javascript:;">+<p id="detail-duibi-tj"> 添加对比</p></a></div> 
+			</div>
+			
+			<div class="detail-zhuan">
+	            #if($fund.yieldRate.score < 7.5)
+	            <a href="/fund/zhuanhuan?sid=$!{fund.sid}&name=$!{fund.name}&score=$!score&code=$!{fund.code}&companyId=$!{fund.company.id}&investType=$!{fund.investType}&nearly1Year=$!{fund.fundYieldRate.nearly1Year}">
+	                <span class="fetail-fangan">查看转换方案</span>
+	                <br/>
+	                建议转换
+	                <span class="detail-bao"></span>
+	            </a>
+	            #elseif($fund.yieldRate.score >= 7.5 && $fund.yieldRate.score < 8.5)
+	            <a href="javascript:;">
+	                继续观望<span class="detail-jianyi"></span>
+	            </a>
+	            #elseif($fund.yieldRate.score >= 8.5)
+	            <a href="javascript:;">
+	                建议持有<span class="detail-chiyou"></span>
+	            </a>
+	            #end
+            </div>
+            
+            
+            
+			<div class="detail-upData">
+                   数据更新至 $!{fund.yieldRate.dataDate}
+            </div>
+		</div>
+		<div class="fund-nav">
+			<ul>
+				<li>
+					<p>净 值</p>
+					<p>
+					#if($fundNetValue.unitNv)
+						$numberTool.format("#0.0000",$fundNetValue.unitNv)
+					#else
+						暂无
+					#end
+					</p>
+				</li>
+				<li>
+					<p>规模（亿元）</p>
+					
+					<p>
+					#if($fund.scale)
+						#set($scale = $numberTool.format($formatStr,$fund.scale))
+						#set($scale = $Double.parseDouble($scale) / 100000000)
+						$numberTool.format($formatStr,$!scale)
+					#else
+						暂无
+					#end
+					</p>
+				</li>
+				<li>
+					<p>同类评分排名</p>
+					<p>
+					#if($fund.yieldRate.scoreRank)
+						$!{fund.yieldRate.scoreRank}/$!{fund.yieldRate.scoreRankBase}
+					#else
+						暂无
+					#end
+					</p>
+				</li>
+			</ul>
+		</div>
+		
+		
+		<div class="fund-manager">
+			<h1 class="fund-t">基金经理</h1>
+			#foreach($mItem in $managerList)
+			#set($jpg=".jpg")
+			
+			<div class="fund-con" >
+				<li class="fund-jl">
+				<a href="/fund/managerDetail?sid=$!{mItem.sid}">
+					<div class="fund-icon">
+						<img alt="$!mItem.name" src="http://static.miliwealth.com/avatar/$mItem.id$jpg">
+					</div>
+					
+					<div class="fund-n">$mItem.name</div>
+					<div class="fund-man-fen">
+						#if($fund.investType.group.value == 1)
+							$scoreTool.get($mItem.yieldRate.equityScore)
+						#elseif($fund.investType.group.value == 2)
+							$scoreTool.get($mItem.yieldRate.bondScore)
+						#elseif($fund.investType.group.value == 3)
+							$scoreTool.get($mItem.yieldRate.qdiiScore)
+						#end
+						<span class="mi-more"></span>
+					</div>
+					</a>
+				</li>
+			</div>
+			#end
+		</div>
+		<div class="fund-per">
+			<h1 class="fund-t">
+				业绩表现 
+			</h1>
+			<div class="fund-con">
+				$!companyPerformance
+			</div>
+		</div>
+		<div class="fund-per">
+			<h1 class="fund-t">
+                $!{fund.company.name}
+                
+            </h1>
+			<div class="fund-con">
+				$!{companyEvaluation}
+			</div>
+		</div>
+		<div class="fund-per">
+			
+			<div class="fund-biaoxian">
+				<div class="fund-t fund-tcenter">业绩表现</div>
+				<div class="fund-trend fund-con " id="tab">
+					<!-- tab标签代码begin -->
+						<div id="tab_menu">
+							<ul>
+							</ul>
+						</div>
+						<div id="tab_box">
+							<div id="main" class="fund-trend"></div>
+						</div>
+					<!-- tab标签代码end -->
+				</div>
+			</div>
+		</div>
+		<div class="fund-rose">
+			<h1 class="fund-t fund-tcenter" >基金涨幅</h1>
+			<div class="fund-con">
+				<div class="fund-table">
+					#set($redClass = "red")
+					#set($greenClass = "green")
+					<ul class="fund-tableul">
+						<li>
+							<dl>
+								<dd>时间</dd>
+								<dd>区间回报</dd>
+								<dd>同类平均</dd>
+								#if($fund.investType.group.value == 2)
+								<dd>中证全债</dd>
+								#else
+								<dd>上证指数</dd>
+								#end
+								<dd>同类排名</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dd>最近1月</dd>
+								<dd>
+									<span>
+									#if($fund.yieldRate.nearly1Month)
+										$numberTool.format($formatStr,$fund.yieldRate.nearly1Month)%
+									#else
+										暂无
+									#end
+									</span>
+								</dd>
+								<dd>
+									<span>
+									#if($yieldRateAvg.nearly1Month)
+										$!numberTool.format($formatStr,$!{yieldRateAvg.nearly1Month})%
+									#else
+										暂无
+									#end
+									</span>
+								</dd>
+								<dd>
+									<span>$!stockIndex.nearly1Month%</span>
+								</dd>
+								<dd>
+								#if($fund.yieldRate.nearly1MonthA && $fund.yieldRate.nearly1MonthB)
+									#if($fund.yieldRate.nearly1MonthA < $fund.yieldRate.nearly1MonthB * 0.3)
+										#set($nearlyRank1MonthClass = "red")
+									#end
+									<span class="$!nearlyRank1MonthClass">$fund.yieldRate.nearly1MonthA/$fund.yieldRate.nearly1MonthB</span>
+								#else
+									暂无
+								#end
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dd>最近3月</dd>
+								<dd>
+									<span>
+									#if($fund.yieldRate.nearly3Month)
+										$numberTool.format($formatStr,$fund.yieldRate.nearly3Month)%
+									#else
+										暂无
+									#end 
+									</span>
+								</dd>
+								<dd>
+									<span>
+									#if($yieldRateAvg.nearly3Month)
+										$!numberTool.format($formatStr,$!{yieldRateAvg.nearly3Month})%
+									#else
+										暂无
+									#end
+									</span>
+								</dd>
+								<dd>
+									<span>$!stockIndex.nearly3Month%</span>
+								</dd>
+								<dd>
+								#if($fund.yieldRate.nearly3MonthA && $fund.yieldRate.nearly3MonthB)
+									#if($fund.yieldRate.nearly3MonthA < $fund.yieldRate.nearly3MonthB * 0.3)
+										#set($nearlyRank3MonthClass = "red")
+									#end
+									<span class="$!nearlyRank3MonthClass">$fund.yieldRate.nearly3MonthA/$fund.yieldRate.nearly3MonthB</span>
+								#else
+									暂无
+								#end
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dd>最近6月</dd>
+								<dd>
+									<span>
+									#if($fund.yieldRate.nearly6Month)
+										$numberTool.format($formatStr,$fund.yieldRate.nearly6Month)%
+									#else
+										暂无
+									#end
+									</span>
+								</dd>
+								<dd>
+									<span>
+									#if($yieldRateAvg.nearly6Month)
+										$!numberTool.format($formatStr,$!{yieldRateAvg.nearly6Month})%
+									#else
+										暂无
+									#end
+									</span>
+								</dd>
+								<dd>
+									<span>$!stockIndex.nearly6Month%</span>
+								</dd>
+								<dd>
+								#if($fund.yieldRate.nearly6MonthA && $fund.yieldRate.nearly6MonthB)
+									#if($fund.yieldRate.nearly6MonthA < $fund.yieldRate.nearly6MonthB * 0.3)
+										#set($nearlyRank6MonthClass = "red")
+									#end
+									<span class="$!nearlyRank6MonthClass">$fund.yieldRate.nearly6MonthA/$fund.yieldRate.nearly6MonthB</span>
+								#else
+									暂无
+								#end
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dd>最近1年</dd>
+								<dd><span>
+									#if($fund.yieldRate.nearly1Year)
+										$numberTool.format($formatStr,$fund.yieldRate.nearly1Year)%
+									#else
+										暂无
+									#end
+									</span>
+								</dd>
+								<dd>
+									<span>
+									#if($yieldRateAvg.nearly1Year)
+										$!numberTool.format($formatStr,$!{yieldRateAvg.nearly1Year})%
+									#else
+										暂无
+									#end
+									</span>
+								</dd>
+								<dd>
+									<span>$!stockIndex.nearly1Year%</span>
+								</dd>
+								<dd>
+								#if($fund.yieldRate.nearly1YearA && $fund.yieldRate.nearly1YearB)
+									#if($fund.yieldRate.nearly1YearA < $fund.yieldRate.nearly1YearB * 0.3)
+										#set($nearlyRank1YearClass = "red")
+									#end
+									<span class="$!nearlyRank1YearClass">$fund.yieldRate.nearly1YearA/$fund.yieldRate.nearly1YearB</span>
+								#else
+									暂无
+								#end
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dd>最近2年</dd>
+								<dd><span>
+									#if($fund.yieldRate.nearly2Year)
+										$numberTool.format($formatStr,$fund.yieldRate.nearly2Year)%
+									#else
+										暂无
+									#end
+									</span>
+								</dd>
+								<dd>
+									<span>
+									#if($yieldRateAvg.nearly2Year)
+										$!numberTool.format($formatStr,$!{yieldRateAvg.nearly2Year})%
+									#else
+										暂无
+									#end
+									</span>
+								</dd>
+								<dd>
+									<span>$!stockIndex.nearly2Year%</span>
+								</dd>
+								<dd>
+								#if($fund.yieldRate.nearly2YearA && $fund.yieldRate.nearly2YearB)
+									#if($fund.yieldRate.nearly2YearA < $fund.yieldRate.nearly2YearB * 0.3)
+										#set($nearlyRank2YearClass = "red")
+									#end
+									<span class="$!nearlyRank2YearClass">$fund.yieldRate.nearly2YearA/$fund.yieldRate.nearly2YearB</span>
+								#else
+									暂无
+								#end
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dd>最近3年</dd>
+								<dd><span>
+									#if($fund.yieldRate.nearly3Year)
+										$numberTool.format($formatStr,$fund.yieldRate.nearly3Year)%
+									#else
+										暂无
+									#end
+									</span>
+								</dd>
+								<dd>
+									<span>
+									#if($yieldRateAvg.nearly3Year)
+										$!numberTool.format($formatStr,$!{yieldRateAvg.nearly3Year})%
+									#else
+										暂无
+									#end
+									</span>
+								</dd>
+								<dd>
+									<span>$!stockIndex.nearly3Year%</span>
+								</dd>
+								<dd>
+								#if($fund.yieldRate.nearly3YearA && $fund.yieldRate.nearly3YearB)
+									#if($fund.yieldRate.nearly3YearA < $fund.yieldRate.nearly3YearB * 0.3)
+										#set($nearlyRank3YearClass = "red")
+									#end
+									<span class="$!nearlyRank3YearClass">$fund.yieldRate.nearly3YearA/$fund.yieldRate.nearly3YearB</span>
+								#else
+									暂无
+								#end
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dd>最近5年</dd>
+								<dd><span>
+									#if($fund.yieldRate.nearly5Year)
+										$numberTool.format($formatStr,$fund.yieldRate.nearly5Year)%
+									#else
+										暂无
+									#end
+									</span>
+								</dd>
+								<dd>
+									<span>
+									#if($yieldRateAvg.nearly5Year)
+										$!numberTool.format($formatStr,$!{yieldRateAvg.nearly5Year})%
+									#else
+										暂无
+									#end
+									</span>
+								</dd>
+								<dd>
+									<span>$!stockIndex.nearly5Year%</span>
+								</dd>
+								<dd>
+								#if($fund.yieldRate.nearly5YearA && $fund.yieldRate.nearly5YearB)
+									#if($fund.yieldRate.nearly5YearA < $fund.yieldRate.nearly5YearB * 0.3)
+										#set($nearlyRank5YearClass = "red")
+									#end
+									<span class="$!nearlyRank5YearClass">$fund.yieldRate.nearly5YearA/$fund.yieldRate.nearly5YearB</span>
+								#else
+									暂无
+								#end
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+		<div class="fund-rose">
+            <h1 class="fund-t" >基金风险</h1>
+            <div class="fund-con" >
+            <div id="fund-riskval"></div>
+            
+            </div>
+        </div>
+ 		<div class="listduibi"><a href="/fundcompare/list">对比<p id="duibinum"></p></a></div> 
+
+	</section>
+	<script	src="http://static.miliwealth.com/fund/code/jquery-1.8.0.min.js"></script>
+	<script	src="http://static.miliwealth.com/fund/js/common/unixtoDate.js$!version"></script>
+	<script src="http://static.miliwealth.com/fund/js/like/like.js$!version"></script>
+	<script src="http://static.miliwealth.com/fund/trend/dist/echarts.js$!version"></script>
+   <script src="http://static.miliwealth.com/fund/js/common/unixtoDate.js$!version"></script>
+	<script src="http://static.miliwealth.com/fund/js/funddetail/trend.js$!version"></script>
+    <script src="http://static.miliwealth.com/fund/code/cookie.js$!version"></script>
+
+	<script src="http://static.miliwealth.com/fund/js/funddetail/fundDetailDuibi.js$!version"></script>
+	<script src="http://static.miliwealth.com/fund/js/common/fundbuy.js$!version"></script>
+	
+</body>
+</html>
+#include("public/tongji.htm")

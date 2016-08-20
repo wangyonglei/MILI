@@ -1,0 +1,108 @@
+#scroller{ width: 100%;}
+.currency { padding-top: 0; overflow: hidden;
+	/*基金列表页面*/
+	.people-top { width: 100%; z-index: 9; background-color: #f6f6f6; overflow: hidden; position: fixed; top: 45px; left: 0; }
+	.people-title { width: 100%; position: relative; font-size: 1.2rem; color: #fff; height: 50px; background-color: #f05a3c; line-height: 50px; text-align: center; }
+	/*	.people-title { 
+	.people-logo { width: 50px; height: 50px; position: absolute; top: 0px; left: 10px; }
+	.people-logo img { width: 50px; height: 50px; }
+	.people-s { display: block; }
+	.people-search { width: 61px; height: 54px; position: absolute; top: 5px; right: 10px; }
+	.people-search img { width: 30px; height: 26px; position: absolute; top: 7px; right: 10px; }
+		}*/
+	.people-menu { width: 100%; height: 60px; position: relative; background-color: #d3e4ed;
+		& dd { float: left; height: 60px; line-height: 60px; text-align: center; }
+		& dd:nth-of-type(1) { width: 46%; }
+		& dd:nth-of-type(2) { width: 24%; }
+		& dd:nth-of-type(3) { width: 30%; font-size: 12px; }
+	}
+	.people-con { position: relative; width: 100%; top: 90px;
+		& p { height: 20px; line-height: 20px; }
+		& p:nth-of-type(1) { font-size: 1rem }
+		& ul { display: block;
+			& li { width: 100%; height: 80px; position: relative; line-height: 80px; border-bottom: 1px solid #e8e8e8;
+				& dd { float: left; text-align: center; line-height: 80px; }
+				& dd:nth-of-type(1) { width: 30%; height: 80px; }
+				& dd:nth-of-type(2) { width: 14%; font-size: .8rem; color: #48637d; }
+				& dd:nth-of-type(3) { width: 14%; font-size: .8rem; }
+				& dd:nth-of-type(4) { width: 20%; font-size: .8rem; padding-top: 20px; }
+				& dd:nth-of-type(5) { width: 22%; font-size: .8rem; }
+			}
+			/*		.people-red { color: #48637d; }
+					.people-green { color: #3c9029; }*/ }
+			.people-icon { width: 45px; height: 45px; border-radius: 22.5px; position: absolute; top: 18px; left: 5px; }
+			.people-name { float: left; position: absolute; position: absolute; left: 55px; font-size: .8rem; top: -12px; text-transform: capitalize; }
+			.people-nt { position: absolute; left: 55px; top: 12px; color: #0b2c4b; font-size: .8rem; }
+		}
+		.jijinlist-menu { position: relative; height: 40px; background-color: #f6f6f6; font-weight: bold; border-bottom: 1px solid #edecec;
+			.listactive { border-bottom: 1px solid #d22929; color: #d22929; }
+			& ul { display: block; }
+			& li { width: 16.5%; height: 40px; float: left; text-align: center; line-height: 40px; font-size: .9rem; color: #626e82 }
+		}
+		.jijinlist-nav { position: relative; height: 35px; background-color: #fff; border-bottom: 1px solid #f6f6f6; color: #626e82; width: 100%; font-size: .7rem;
+			& ul { display: block; margin-top: 1px;
+				& li { float: left; height: 35px; line-height: 35px; text-align: center; }
+				& li:nth-of-type(1) { width: 48%; text-align: left; padding-left: 2%; }
+				& li:nth-of-type(2) { width: 22%; }
+				& li:nth-of-type(3) { width: 28%; }
+			}
+		}
+		.jijinlist-con { position: relative; padding-left: 2%; padding-top: 130px;
+			& ul { display: block; position: relative; width: 100%;
+				& li { height: 70px; position: relative; width: 100%; border-bottom: 1px solid #ebebeb; overflow: hidden; color: #626e82;
+					& dd { height: 70px; display: block; float: left; }
+					& dd:nth-of-type(1) { width: 50%; text-align: left; }
+					& dd:nth-of-type(2) { width: 25%; text-align: center; line-height: 70px; font-size: 1.1rem; font-weight: bold; }
+					& dd:nth-of-type(3) { width: 25%; text-align: center; /*padding-top: 10px; line-height: 22px; */ line-height: 45px;}
+					.jijinlist-tit { font-size: 0.9rem; margin-top: 13px; margin-bottom: 5px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 100%; }
+					.jijin-code { display: inline; position: relative; height: 18px; overflow: hidden;
+
+
+						.jijinlist-count {  height: 17px; line-height: 17px;padding: 0 10px;  float: left; border: 1px solid #eaeaea; text-align: center; font-size: 10px !important; border-radius: 10px; }
+
+					}
+					.jijinlist-zcolor { color: #e65a0d; font-size: 1.02rem; font-weight: bold;line-height: 0px; }
+					.jijinlist-pj { font-size: .7rem; }
+				}
+			}
+		}
+		.currency-con { position: relative; padding-left: 2%; padding-top: 130px;
+			& ul { display: block; position: relative; width: 100%;-webkit-overflow-scrolling: touch; overflow-scrolling: touch; -moz-overflow-scrolling: touch; overflow-y:scroll;
+				& li { height: 70px; position: relative; width: 100%; border-bottom: 1px solid #ebebeb; overflow: hidden; color: #626e82;
+					& dd { height: 70px; display: block; float: left; }
+					& dd:nth-of-type(1) { width: 50%; text-align: left; }
+					& dd:nth-of-type(2) { width: 25%; text-align: center; line-height: 25px; padding-top: 10px; font-size: 1.1rem; font-weight: bold; }
+					& dd:nth-of-type(3) { width: 25%; text-align: center; /*padding-top: 10px; line-height: 22px; */ line-height: 71px; color: #e65a0d; font-size: 1.02rem; font-weight: bold;}
+					.jijinlist-tit { font-size: 0.9rem; margin-top: 13px; margin-bottom: 5px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 100%; }
+					.jijin-code { display: inline; position: relative; height: 18px; overflow: hidden;
+						.jianyi { padding: 1px 10px; float: left; border: 1px solid #eaeaea; text-align: center; font-size: 10px !important; border-radius: 10px; }
+						.jijinlist-count { float: left; width: auto; padding: 1px 10px; margin-left: 5px; font-size: .7rem; border: 1px solid #eaeaea; border-radius: 10px; }
+					}
+					/*.jijinlist-zcolor { color: #e65a0d; font-size: 1.02rem; font-weight: bold;line-height: 0px; }*/
+					.jijinlist-pj { font-size: .7rem; font-weight: normal; }
+				}
+			}
+		}
+	}
+	
+	/*suggest*/ 
+	.fund-suggest { position: fixed; z-index: 99; background-color: #f6f6f6; top: 95px; display: none; padding-bottom: 10px;  width: 100%;overflow:auto;
+		.search-jjtit { width: 0px; height: 0px;/* background-color: #f2f2f2; text-align: center; line-height: 40px; position: relative;*/ overflow: hidden; }
+		& ul {font-size: .9rem; height: 100%; width: 100%; overflow:auto; display: block;   
+			& li { width: 100%; height: 40px; text-align: left; line-height: 40px; border-bottom: 1px solid #d7d7d7 }
+			/*& li:nth-of-type(2n){ background-color: #faf8f8;}*/
+			& dl { float: left; width: 100%; }
+			& dd { float: left; }
+		}
+		& dd:nth-of-type(1) { width: 20%; padding-left: 5%; }
+		& dd:nth-of-type(2) { width: 55%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;  }
+		& dd:nth-of-type(3) { width: 20%; text-align: center; }
+	}
+	/*貨比*/
+	.jijinlist-huobif { line-height: 51px; color: #e65a0d; font-weight: bold; }
+	.jijinhuobi-tit{   font-size: 0.9rem;  line-height: 40px;  overflow: hidden;  white-space: nowrap;  text-overflow: ellipsis;  width: 100%; }
+ /*背景*/
+
+  .search-bg{ width: 100%; height: 100%; position: fixed; top: 95px; background: rgba(0,0,0,.6); z-index: 95; display: none;}
+  .jijinlist-zanwu{ line-height: 71px;}
+

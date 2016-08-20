@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+	#include("public/no-cache.htm")
+	<meta name="keywords" content="$!{fundManager.name},$!{fundManager.company.name}" />
+	<meta name="description" content="$!{capacity}" />
+	<title>基情 基金经理详情</title>
+	<link href="http://static.miliwealth.com/fund/css/common/common.css$!version" rel="stylesheet" />
+	<link href="http://static.miliwealth.com/fund/css/managerDetail/managerDetail.css$!version" rel="stylesheet" />
+</head>
+#set ($Double = 0.0)
+#set($formatStr="#0.00")
+<script>
+var code = 'm_$!{fundManager.sid}';
+</script>
+<body>
+	<section class="managerDetail">
+		#include("public/header.htm")
+		<div class="mandetail-head">
+			<div class="mandetail-tit">
+				<div class="mandetail-icon">
+					#set($jpg = ".jpg")
+					<img alt="$!fundManager.name" src="http://static.miliwealth.com/avatar/$fundManager.id$jpg?sex=$!fundManager.sex.value()"  ></div>
+				<div class="mandetail-name">$!fundManager.name</div> 
+			</div>
+			<div class="mandetail-tclass">
+				<ul class="mandetul">
+					#if($fundManager.yieldRate.startWorkEquity) 
+					<li #if($type == 1) class='mandetail-act' #end >
+						<a href="/fund/managerDetail?sid=$!fundManager.sid&investTypeGroup=1">偏股</a>
+					</li>
+					#end
+					
+					#if($fundManager.yieldRate.startWorkBond)
+					<li #if($type == 2) class='mandetail-act' #end >
+						<a href="/fund/managerDetail?sid=$!fundManager.sid&investTypeGroup=2">偏债</a>
+					</li>
+					#end
+					
+					#if($fundManager.yieldRate.startWorkQdii)
+					<li #if($type == 3) class='mandetail-act' #end >
+						<a href="/fund/managerDetail?sid=$!fundManager.sid&investTypeGroup=3">QDII</a>
+					</li>
+					#end
+				</ul>
+			</div>
+			<div class="mandetail-s">
+				<span class="mandetail-score color-fen">
+				<!-- 偏股分数 -->
+				#if($type ==1)
+					#if($fundManager.yieldRate.equityScore)
+						#set($score = $numberTool.format($formatStr,$!fundManager.yieldRate.equityScore))
+						#if($Double.parseDouble($score) < 7.5)
+							<span class="buzu">不到</span> 7.5
+						#else
+							$!numberTool.format("#0.0",$!fundManager.yieldRate.equityScore)
+						#end
+					#else
+						暂无
+					#end
+				#elseif($type ==2) <!-- 偏债分数 -->
+					#if($fundManager.yieldRate.bondScore)
+						#set($score = $numberTool.format($formatStr,$!fundManager.yieldRate.bondScore))
+						#if($Double.parseDouble($score) < 7.5)
+							<span class="buzu">不到</span> 7.5
+						#else
+							$!numberTool.format("#0.0",$!fundManager.yieldRate.bondScore)
+						#end
+					#else
+						暂无
+					#end
+				#else
+					#if($fundManager.yieldRate.qdiiScore)
+						#set($score = $numberTool.format($formatStr,$!fundManager.yieldRate.qdiiScore))
+						#if($Double.parseDouble($score) < 7.5)
+							<span class="buzu">不到</span> 7.5
+						#else
+							$!numberTool.format("#0.0",$!fundManager.yieldRate.qdiiScore)
+						#end
+					#else
+						暂无
+					#end
+				#end
+				<!-- </span>
+				<span class="mandetail-fen"> -->
+				#if($fundManager.yieldRate.equityScore || $fundManager.yieldRate.bondScore || $fundManager.yieldRate.qdiiScore)
+					分
+				#end
+				</span>
+			</div>
+		</div>
+	<div class="mandetail-nav">
+		<ul>
+			<li>
+				<p>投资年限（年）</p>
+				<p>
+				#if($fundManager.yieldRate.investYear)
+					$!numberTool.format("#0.0",$!{fundManager.yieldRate.investYear})
+				#else
+					暂无
+				#end
+				</p>
+			</li>
+			<li>
+				<p>任职回报</p>
+				<p>
+				#if($type == 1)
+					#if($fundManager.yieldRate.fromSetupEquity)
+						$!numberTool.format("#0.00",$!{fundManager.yieldRate.fromSetupEquity})%
+					#else
+						暂无
+					#end
+				#elseif($type == 2)
+					#if($fundManager.yieldRate.fromSetupBond)
+						$!numberTool.format("#0.00",$!{fundManager.yieldRate.fromSetupBond})%
+					#else
+						暂无
+					#end
+				#else
+					#if($fundManager.yieldRate.fromSetupQdii)
+						$!numberTool.format("#0.00",$!{fundManager.yieldRate.fromSetupQdii})%
+					#else
+						暂无
+					#end
+				#end
+				</p>
+			</li>
+			<li>
+				<p>同类排名</p>
+				<p>
+				#if($type == 1)
+					#if($fundManager.yieldRate.equityScoreRankBase)
+						$!{fundManager.yieldRate.equityScoreRank}/$!{fundManager.yieldRate.equityScoreRankBase}
+					#else
+						暂无
+					#end
+				#elseif($type == 2)
+					#if($fundManager.yieldRate.bondScoreRankBase)
+						$!{fundManager.yieldRate.bondScoreRank}/$!{fundManager.yieldRate.bondScoreRankBase}
+					#else
+						暂无
+					#end
+				#elseif($type == 3)
+					#if($fundManager.yieldRate.qdiiScoreRankBase)
+						$!{fundManager.yieldRate.qdiiScoreRank}/$!{fundManager.yieldRate.qdiiScoreRankBase}
+					#else
+						暂无
+					#end
+				#end
+				</p>
+			</li>
+		</ul>
+	</div>
+    <div class="mandetail-company">
+        <div class="mandetail-t">基金公司</div>
+        <div class="mandetail-con">$!{fundManager.company.name}</div>
+    </div>
+    <div class="mandetail-company">
+        <div class="mandetail-t">投资风格</div>
+        <div class="mandetail-con">$!style</div>
+    </div>
+	<div class="mandetail-shuiping">
+		<div class="mandetail-t">投资水平</div>
+		<div class="mandetail-con">$!{capacity}</div>
+	</div>
+	<div class="mandetail-style">
+		<div class="mandetail-t">投资模拟</div>
+		<div class="mandetail-con">$!{investResult}</div>
+	</div>
+	<div class="mandetail-off">
+		<div class="mandetail-t">业绩表现</div>
+		<div>
+			<ul class="eva-contable">
+				<div id="eva-contableli">
+					<dt>
+						<dl>基金名称</dl>
+						<dl>在职时间</dl>
+						<dl>在职回报</dl>
+						<dl>同期指数</dl>
+						<dl>同类排名</dl>
+					</dt>
+				</div>
+				#foreach($h in $fundManager.history)
+				<li>
+					#if($!h.fundSid && $!h.investType.value!=3)
+					<a href="/fund/fundDetail?sid=$!{h.fundSid}">
+					#else
+					<a href="javascript:;">
+					#end
+						<dt>
+							<dl>
+								<span class="fundMn">$h.FundName</span> 
+								<span class="red fundMnred">($!{h.investType.shortName})</span>
+							</dl>
+							<dl>
+							#if($h.adjustedDate)
+								$!dateTool.format("yyyy-MM-dd",$!h.adjustedDate)
+							#else
+								未知
+							#end
+							 ~
+							#if($h.leaveDate)
+								$!dateTool.format("yyyy-MM-dd",$!h.leaveDate)
+							#else
+								至今
+							#end
+							</dl>
+							<dl>
+								<span class="$adClass">
+								#if($h.adjustedRate)
+									$!numberTool.format("#0.00",$!{h.adjustedRate})%
+								#else
+									暂无
+								#end
+								</span>
+							</dl>
+							<dl>
+								<span class="$suClass">
+								#if($h.surpassIndex)
+									$!numberTool.format("#0.00",$!{h.surpassIndex})%
+								#else
+									暂无
+								#end
+								</span>
+							</dl>
+							<dl class="eva-rank">
+							#if($h.rank && $h.rankBase)
+								#if($h.rank < $h.rankBase * 0.3)
+									<span class="red">
+								#else
+									<span>
+								#end
+								$!h.rank/$!h.rankBase</span>
+							#else
+								暂无
+							#end
+							</dl>
+						</dt>
+					</a>
+				</li>
+				#end
+			</ul>
+		</div>
+	</div>
+	<div class="mandetail-moni">
+		<div class="mandetail-con">
+			
+		</div>
+	</div>
+	
+
+</section>
+
+<script src="http://static.miliwealth.com/fund/code/jquery-1.8.0.min.js"></script>
+<script src="http://static.miliwealth.com/fund/js/like/like.js$!version"></script>
+<script src="http://static.miliwealth.com/fund/js/managerdetail/managerdetail.js$!version"></script>
+
+</body>
+</html>
+#include("public/tongji.htm")

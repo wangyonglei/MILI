@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	#include("public/no-cache.htm")
+	<meta name="keywords" content="基金经理排行" />
+	<meta name="description" content="基金经理排行" />
+	<title>基情 基金经理排行</title>
+	<link rel="stylesheet" type="text/css" href="http://static.miliwealth.com/fund/css/common/common.css$!version">
+	<link rel="stylesheet" type="text/css" href="http://static.miliwealth.com/fund/css/manager/manager.css$!version">
+	</head>
+<script>
+var type = $!type
+</script>
+<body>
+	#include("public/header.htm")
+	<section class="managerList">
+		<div class="people-top">
+			<div class="people-search" id="people-search">
+				<form class="people-searchf" action="/fund/searchResult" method="post">
+					<input type="text" name="keyWord" value="$!keyWord"  autocomplete="off"  placeholder="请输入基金经理姓名/首字母" id="manager-sug">
+					<input type="hidden" name="type" value="$type"/>
+					<button>确定</button>
+				</form>
+			</div>
+			<div class="manager-menu">
+				<ul>
+					<li
+					#if($type == 1)
+						class="listactive"
+					#end
+					>
+						<a href="?investTypeGroup=1&keyWord=$!keyWord">偏股</a>
+					</li>
+					<li
+					#if($type == 2)
+						class="listactive"
+					#end
+					>
+						<a href="?investTypeGroup=2&keyWord=$!keyWord">偏债</a>
+					</li>
+					<li
+					#if($type == 3)
+						class="listactive" 
+					#end
+					>
+						<a href="?investTypeGroup=3&keyWord=$!keyWord">QDII</a>
+					</li>
+				</ul>
+			</div>
+			<div class="manager-nav">
+				<ul>
+					<li>姓名</li>
+					<li>
+						<a href="">
+							基情评分
+							<span class="jiantou">↓</span>
+						</a>
+					</li>
+					<li>
+						<a href="">生涯年化回报率</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		#if($listSize > 0)
+		<div id="wrapper">
+			<div id="scroller">
+				<div id="thelist" class="manager-con">
+					<ul id="content">
+						#foreach($item in $list)
+						<a href="/fund/managerDetail?sid=$item.sid&investTypeGroup=$type">
+							<li>
+								<dl>
+									<dd>
+										<div class="man-icon">
+										#set($jpg=".jpg")
+										<img alt="$!item.name" class="manager-icon lazy"  data-original="http://static.miliwealth.com/avatar/$item.id$jpg?sex=$!item.sex.value()" src="http://static.miliwealth.com/avatar/noIcon/male.jpg">
+										</div>
+										
+										
+										
+										
+										<div class="manager-left"><div class="manager-name">$!item.name</div>
+										<div class="manager-nt">$!item.company.name</div></div>
+									</dd>
+									<dd>
+									#if($type == 1)
+										#set($score = $item.yieldRate.equityScore)
+									#elseif($type == 2)
+										#set($score = $item.yieldRate.bondScore)
+									#elseif($type == 3)
+										#set($score = $item.yieldRate.qdiiScore)
+									#end
+									
+									#if($score < 7.5)
+										<span class="budao">不到</span>7.5
+									#else
+										$!numberTool.format("#0.0",$!score)
+									#end
+									</dd>
+									<dd>
+										<span class="red">
+											#if($type == 1 && $item.yieldRate.returnProportionEquity)
+												$!numberTool.format("#0.00",$item.yieldRate.returnProportionEquity)
+												<span class="jijinlist-bai">%</span>
+											#elseif($type == 2 && $item.yieldRate.returnProportionBond)
+												$!numberTool.format("#0.00",$item.yieldRate.returnProportionBond)
+												<span class="jijinlist-bai">%</span>
+											#elseif($type == 3 && $item.yieldRate.returnProportionQdii)
+												$!numberTool.format("#0.00",$item.yieldRate.returnProportionQdii)
+												<span class="jijinlist-bai">%</span>
+											#else
+												暂无
+											#end
+											
+										</span>
+									</dd>
+								</dl>
+							</li>
+						</a>
+						#end
+					</ul>
+				</div>
+			<div id="pullmore">
+					#if($list.size()==100)
+						更多信息请通过搜索功能获取
+					#else
+						已无更多数据
+					#end
+				</div>
+	<!-- 			   <div id="pullUp">
+                    <span class="pullUpIcon"></span> <span class="pullUpLabel">
+                    #if($list.size()==100)
+                        更多信息请通过搜索功能获取
+                    #else
+                        已无更多数据
+                    #end
+                    </span>
+                </div>  -->
+			</div>
+		</div>
+		#else
+			暂无内容
+		#end
+		<div id="manager-info">
+			<ul class="search-jjj"></ul>
+			<div class="listsuggest-close"><div class="close">关闭</div></div>
+		</div>
+	</section>
+<script src="http://static.miliwealth.com/fund/code/jquery-1.8.0.min.js"></script>
+<script src="http://static.miliwealth.com/fund/code/iscroll.js"></script>
+<script src="http://static.miliwealth.com/fund/code/jquery.lazyload.js"></script>
+<script src="http://static.miliwealth.com/fund/js/manager/manager.js$!version"></script>
+
+</body>
+</html>
+#include("public/tongji.htm")

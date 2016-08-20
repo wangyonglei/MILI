@@ -1,0 +1,39 @@
+/*news_detail.html*/
+.new-detail { position: relative; top: 0; left: 0; height: auto; overflow: hidden;  padding-bottom: 70px;
+	/*新闻内容*/
+	.newdetail { position: relative; height: auto; overflow: hidden; background-color: #fbfbfb;
+		.newdetail-header { position: relative; border-top: 1px solid #eaeaea; border-bottom: 1px solid #eaeaea; padding: 8px 0; margin-top: 2px;
+			& h1 { text-indent: 2%;/* font-weight: normal;*/ font-size: .97rem; color: #3e3e3e }
+			& h2 { color: #ccc; text-indent: 2%; font-weight: normal; font-size: .7rem; margin-top: 6px; color: #626e82; }
+			.newdetail-data { margin-left: 10px; }
+		}
+		.newdetail-articlecon { position: relative; padding: 2px 2% 10px 2%; font-size: .8rem; line-height: 23px; color: #3e3e3e;
+			.newdetail-con { position: relative;
+				& img { width: 100%; display: block; margin: 10px 0; }
+			}
+		}
+	}
+
+	/*新闻相关*/
+	.newdetail-about { position: relative; padding: 0 2%; border-top: 10px solid #eaeaea; color: #3e3e3e;
+		.newdetail-aboutul { font-size: .8rem;
+			& li { height: 38px; line-height: 38px; border-bottom: 1px solid #eaeaea;overflow:hidden;white-space:nowrap;text-overflow:ellipsis; width:100% }
+			.newdetail-abouttit { height: 38px; line-height: 38px; border-bottom: 1px solid #eaeaea;
+				b { width: 20px; height: 20px; background-color: #94c4f1; background-image: url(../../../images/about.png); background-size: cover; display: block; float: left; margin-right: 5px; margin-top: 9px; }
+			}
+		}
+	}
+}
+/*新闻页面点赞*/
+/*.new-detail-zan { width: 96%; padding: 20px 2%; position: relative; height: 35px;  line-height: 35px;background-color: #fff;
+	& a { display: block; width: 100%; height: 100%; font-size: 10px; color: #878787; }
+	& li { float: left; text-align: center; border: 1px solid #eaeaea; }
+	& li:nth-of-type(1) { width: 32%; }
+	& li:nth-of-type(2) { width: 32%; margin-left: 1%; margin-right: 1%; }
+	& li:nth-of-type(3) { width: 32%; }
+	.new-zan1 { width: 16px; height: 16px; position: relative; top: 2px;
+		& img { width: 16px; height: 16px; }
+	}
+}*/
+
+#bottom-zan{ position: fixed; bottom: 0; left: 0; padding-top: 10px;}

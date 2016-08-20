@@ -1,0 +1,94 @@
+@charset "UTF-8";
+.people-top {
+  position: fixed;
+  top: 45;
+  left: 0;
+  z-index: 9;
+  background-color: #f6f6f6;
+  width: 100%; }
+
+.suggest-fund, .suggest-manager {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  background-color: #f6f6f6; }
+  .suggest-fund #thelist, .suggest-manager #thelist {
+    padding: 0;
+    width: 100%; }
+  .suggest-fund #wrapper, .suggest-manager #wrapper {
+    margin-top: 55px; }
+
+/*基金suggest*/
+.fund-suggest {
+  position: relative;
+  display: none;
+  padding-bottom: 10px;
+  width: 100%;
+  overflow: auto;
+  background-color: #f6f6f6; }
+  .fund-suggest ul {
+    font-size: .9rem;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    display: block; }
+    .fund-suggest ul li {
+      width: 100%;
+      height: 40px;
+      text-align: left;
+      line-height: 40px;
+      border-bottom: 1px solid #d7d7d7; }
+    .fund-suggest ul dl {
+      float: left;
+      width: 100%; }
+    .fund-suggest ul dd {
+      float: left; }
+  .fund-suggest dd:nth-of-type(1) {
+    width: 20%;
+    padding-left: 5%;
+    height: 40px;
+    display: block; }
+  .fund-suggest dd:nth-of-type(2) {
+    width: 55%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+  .fund-suggest dd:nth-of-type(3) {
+    width: 20%;
+    text-align: center; }
+
+/*基金经理suggest*/
+#manager-info {
+  position: relative;
+  display: none;
+  padding-bottom: 10px;
+  width: 100%;
+  overflow: auto;
+  background-color: #f6f6f6; }
+  #manager-info .search-jjtit {
+    width: 0;
+    height: 0px;
+    /* background-color: #f2f2f2; text-align: center; line-height: 40px; position: relative;*/
+    overflow: hidden; }
+  #manager-info ul {
+    position: relative;
+    font-size: .9rem;
+    /*& li:nth-of-type(2n){ background-color: #faf8f8;}*/ }
+    #manager-info ul li {
+      width: 100%;
+      height: 40px;
+      text-align: left;
+      line-height: 40px;
+      border-bottom: 1px solid #d7d7d7; }
+    #manager-info ul dl {
+      float: left;
+      width: 100%; }
+    #manager-info ul dd {
+      float: left; }
+  #manager-info .search-jjj dd:nth-of-type(1) {
+    width: 75%;
+    padding-left: 5%; }
+  #manager-info .search-jjj dd:nth-of-type(2) {
+    width: 20%; }
+  #manager-info .search-jjj span {
+    padding-left: 5px; }

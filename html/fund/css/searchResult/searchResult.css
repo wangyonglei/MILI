@@ -1,0 +1,277 @@
+.searchResult .search-tit {
+  width: 100%;
+  height: 50px;
+  background-color: #f5f5f5;
+  position: relative;
+  text-indent: 1rem;
+  line-height: 50px; }
+.searchResult .search-nav {
+  position: relative;
+  height: 35px;
+  background-color: #fff;
+  border-bottom: 1px solid #f6f6f6;
+  color: #626e82;
+  width: 100%;
+  font-size: .7rem; }
+  .searchResult .search-nav ul {
+    display: block;
+    margin-top: 1px; }
+    .searchResult .search-nav ul li {
+      float: left;
+      height: 35px;
+      line-height: 35px;
+      text-align: center; }
+    .searchResult .search-nav ul li:nth-of-type(1) {
+      width: 48%;
+      text-align: left;
+      padding-left: 2%; }
+    .searchResult .search-nav ul li:nth-of-type(2) {
+      width: 25%; }
+    .searchResult .search-nav ul li:nth-of-type(3) {
+      width: 25%; }
+.searchResult .search-con {
+  position: relative;
+  padding-left: 2%; }
+  .searchResult .search-con ul {
+    display: block;
+    position: relative;
+    width: 100%; }
+    .searchResult .search-con ul li {
+      height: 70px;
+      position: relative;
+      width: 100%;
+      border-bottom: 1px solid #ebebeb;
+      overflow: hidden;
+      color: #626e82; }
+      .searchResult .search-con ul li dd {
+        height: 70px;
+        display: block;
+        float: left; }
+      .searchResult .search-con ul li dd:nth-of-type(1) {
+        width: 50%;
+        text-align: left; }
+      .searchResult .search-con ul li dd:nth-of-type(2) {
+        width: 25%;
+        text-align: center;
+        line-height: 70px;
+        font-size: 1.1rem;
+        font-weight: bold; }
+      .searchResult .search-con ul li dd:nth-of-type(3) {
+        width: 25%;
+        text-align: center;
+        padding-top: 10px;
+        line-height: 22px; }
+      .searchResult .search-con ul li .jijinlist-tit {
+        font-size: 0.9rem;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 100%; }
+      .searchResult .search-con ul li .jijin-code {
+        display: inline;
+        position: relative;
+        height: 18px;
+        overflow: hidden; }
+        .searchResult .search-con ul li .jijin-code .jianyi {
+          padding: 1px 10px;
+          float: left;
+          border: 1px solid #eaeaea;
+          text-align: center;
+          font-size: 10px !important;
+          border-radius: 10px; }
+        .searchResult .search-con ul li .jijin-code .jijinlist-count {
+          float: left;
+          width: auto;
+          padding: 1px 10px;
+          margin-left: 5px;
+          font-size: .7rem;
+          border: 1px solid #eaeaea;
+          border-radius: 10px; }
+      .searchResult .search-con ul li .jijinlist-zcolor {
+        color: #e65a0d;
+        font-size: 1.02rem;
+        font-weight: bold; }
+      .searchResult .search-con ul li .jijinlist-pj {
+        font-size: .7rem; }
+.searchResult .currency-con {
+  position: relative;
+  padding-left: 2%; }
+  .searchResult .currency-con ul {
+    display: block;
+    position: relative;
+    width: 100%; }
+    .searchResult .currency-con ul li {
+      height: 70px;
+      position: relative;
+      width: 100%;
+      border-bottom: 1px solid #ebebeb;
+      overflow: hidden;
+      color: #626e82;
+      /*.jijinlist-zcolor { color: #e65a0d; font-size: 1.02rem; font-weight: bold;line-height: 0px; }*/ }
+      .searchResult .currency-con ul li dd {
+        height: 70px;
+        display: block;
+        float: left; }
+      .searchResult .currency-con ul li dd:nth-of-type(1) {
+        width: 50%;
+        text-align: left; }
+      .searchResult .currency-con ul li dd:nth-of-type(2) {
+        width: 25%;
+        text-align: center;
+        line-height: 25px;
+        padding-top: 10px;
+        font-size: 1.1rem;
+        font-weight: bold; }
+      .searchResult .currency-con ul li dd:nth-of-type(3) {
+        width: 25%;
+        text-align: center;
+        /*padding-top: 10px; line-height: 22px; */
+        line-height: 71px;
+        color: #e65a0d;
+        font-size: 1.02rem;
+        font-weight: bold; }
+      .searchResult .currency-con ul li .jijinlist-tit {
+        font-size: 0.9rem;
+        margin-top: 13px;
+        margin-bottom: 5px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 100%; }
+      .searchResult .currency-con ul li .jijin-code {
+        display: inline;
+        position: relative;
+        height: 18px;
+        overflow: hidden; }
+        .searchResult .currency-con ul li .jijin-code .jianyi {
+          padding: 1px 10px;
+          float: left;
+          border: 1px solid #eaeaea;
+          text-align: center;
+          font-size: 10px !important;
+          border-radius: 10px; }
+        .searchResult .currency-con ul li .jijin-code .jijinlist-count {
+          float: left;
+          width: auto;
+          padding: 1px 10px;
+          margin-left: 5px;
+          font-size: .7rem;
+          border: 1px solid #eaeaea;
+          border-radius: 10px; }
+      .searchResult .currency-con ul li .jijinlist-pj {
+        font-size: .7rem;
+        font-weight: normal; }
+.searchResult .manager-nav {
+  position: relative;
+  height: 35px;
+  background-color: #fff;
+  border-bottom: 1px solid #f6f6f6;
+  width: 100%;
+  font-size: .7rem; }
+  .searchResult .manager-nav ul {
+    display: block;
+    margin-top: 1px;
+    height: auto;
+    overflow: hidden; }
+    .searchResult .manager-nav ul li {
+      float: left;
+      height: 35px;
+      line-height: 35px;
+      text-align: center; }
+    .searchResult .manager-nav ul li:nth-of-type(1) {
+      width: 45%;
+      overflow: hidden; }
+    .searchResult .manager-nav ul li:nth-of-type(2) {
+      width: 20%; }
+    .searchResult .manager-nav ul li:nth-of-type(3) {
+      width: 35%; }
+.searchResult .manager-con {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block; }
+  .searchResult .manager-con a {
+    width: 100%;
+    display: block;
+    height: 71px; }
+  .searchResult .manager-con p {
+    height: 20px;
+    line-height: 20px; }
+  .searchResult .manager-con p:nth-of-type(1) {
+    font-size: 1rem; }
+  .searchResult .manager-con li {
+    width: 100%;
+    position: relative;
+    line-height: 70px;
+    height: auto;
+    overflow: hidden;
+    /* border-bottom: 1px solid #e8e8e8;*/ }
+    .searchResult .manager-con li dl {
+      width: 100%;
+      height: 100%;
+      overflow: hidden; }
+    .searchResult .manager-con li dd {
+      float: left;
+      text-align: center; }
+    .searchResult .manager-con li dd:nth-of-type(1) {
+      width: 45%;
+      height: 70px;
+      /*border-bottom: 1px solid #e8e8e8;*/ }
+    .searchResult .manager-con li dd:nth-of-type(2) {
+      width: 20%;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-bottom: 1px solid #e8e8e8;
+      height: 70px; }
+    .searchResult .manager-con li dd:nth-of-type(3) {
+      width: 35%;
+      color: #e65a0d;
+      font-size: 1.02rem;
+      height: 70px;
+      font-weight: bold;
+      border-bottom: 1px solid #e8e8e8; }
+  .searchResult .manager-con .man-icon {
+    height: 70px;
+    float: left;
+    margin-top: 18px; }
+  .searchResult .manager-con .manager-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 22px; }
+  .searchResult .manager-con .manager-left {
+    border-bottom: 1px solid #e8e8e8;
+    height: 70px;
+    left: 52px;
+    position: relative;
+    /*width: 100%;*/
+    width: 70%; }
+  .searchResult .manager-con .manager-name {
+    color: #0b2c4b;
+    float: left;
+    position: absolute;
+    font-size: .95rem;
+    top: -8px;
+    text-transform: capitalize; }
+  .searchResult .manager-con .manager-nt {
+    position: absolute;
+    top: 13px;
+    height: 58px;
+    color: #0b2c4b;
+    text-align: left;
+    font-size: .7rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 70%; }
+.searchResult #wrapper {
+  padding-top: 0;
+  top: 0; }
+.searchResult .search-more {
+  text-align: center;
+  height: 20px;
+  margin: 20px;
+  position: relative;
+  font-size: .93rem; }

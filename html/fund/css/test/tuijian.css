@@ -1,0 +1,80 @@
+.recommend {
+  position: relative; }
+  .recommend .rec-title {
+    position: relative;
+    text-align: center;
+    height: 40px;
+    background-color: #f2f2f2;
+    line-height: 40px;
+    font-size: .85rem; }
+  .recommend .rec-d {
+    position: relative; }
+    .recommend .rec-d .rec-bianma {
+      float: right;
+      position: relative;
+      right: 20px;
+      font-weight: normal;
+      font-size: .8rem; }
+    .recommend .rec-d .rec-dul {
+      position: relative;
+      padding: 10px 0;
+      height: auto;
+      overflow: hidden; }
+      .recommend .rec-d .rec-dul li {
+        float: left;
+        width: 33%;
+        text-align: center;
+        color: red;
+        font-size: 1.7rem; }
+      .recommend .rec-d .rec-dul p {
+        color: #555;
+        font-size: .8rem;
+        margin-top: 5px; }
+  .recommend .rec-dd {
+    background-color: #ccc; }
+  .recommend h1 {
+    height: 40px;
+    font-size: .9rem;
+    line-height: 40px;
+    border-bottom: 1px solid #f2f2f2;
+    margin-top: 5px;
+    padding-left: 10px;
+    background-color: #fff; }
+  .recommend .rec-tcon {
+    font-size: .9rem;
+    padding-left: 10px;
+    margin-top: 10px;
+    position: relative;
+    line-height: 22px;
+    margin-bottom: 5px; }
+  .recommend .rec-class {
+    font-size: .8rem;
+    float: right;
+    padding: 0 5px;
+    height: 25px;
+    margin-top: 6px;
+    font-weight: normal;
+    line-height: 25px;
+    margin-right: 10px;
+    border: 1px solid #f2f2f2;
+    border-radius: 2px; }
+  .recommend .rec-ddul {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    background-color: #fff; }
+    .recommend .rec-ddul li {
+      font-size: 1.7rem;
+      color: red;
+      float: left;
+      text-align: center;
+      width: 50%; }
+    .recommend .rec-ddul li:nth-of-type(1) {
+      text-align: left;
+      text-indent: 1rem; }
+    .recommend .rec-ddul p {
+      color: #555;
+      font-size: .8rem;
+      margin-top: 5px; }

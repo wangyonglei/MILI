@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/*清除格式*/
+* { margin: 0; padding: 0 }
+html { -webkit-text-size-adjust: none; }
+body { font-family: "微软雅黑";  min-width: 320px;}
+p, section, span, h1, h2, ul, li ，dl, dd, dt, table { margin: 0; padding: 0 }
+h1 ,h2{font-weight: normal;}
+li { list-style: none; }
+a { text-decoration: none; }
+a:link { color: #626e82 }
+a:visited { color: #626e82 }
+a:hover { color: #626e82 }
+a:active { color: #626e82 }
+a, input, button { margin: 0; padding: 0; outline: none; border: 0; -webkit-tap-highlight-color: rgba(255, 0, 0, 0); }
+button{ background: none}

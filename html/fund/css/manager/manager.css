@@ -1,0 +1,205 @@
+@charset "UTF-8";
+#scroller {
+  width: 100%; }
+
+/*基金经理列表页*/
+.people-top {
+  width: 100%;
+  background-color: #f6f6f6;
+  overflow: hidden;
+  position: fixed;
+  top: 45px;
+  left: 0;
+  z-index: 2; }
+
+.managerList {
+  /*	.manager-con { .jianyi { padding: 2px 2px; height: 20px; font-size: 12px; color: #838383; border: 1px solid #ccc; border-radius: 5px; position: relative; top: -15px; line-height: 20px; }
+  		& ul { & li { .jijinlist-start { width: 27px; height: 25px; position: absolute; top: 20px; left: 20px; }
+  				.jijinlist-start img { width: 27px; height: 25px; }
+  				.jijinlist-num { border: 1px solid #ebebeb; border-radius: 2px; width: 20px; text-align: center; position: absolute; top: 70px; left: 25px; color: #ccc; font-size: 0.7rem; }
+  				.jijinlist-tit { font-size: 0.9rem; color: #595959; left: 5px; }
+  				.jijinlist-count { position: absolute; top: 40px; left: 10px; color: #ccc; font-size: .9rem; }
+  				.jijinlist-zhe { border: 1px solid #f05a3c; color: #f05a3c; position: absolute; top: 68px; left: 15px; font-size: .8rem; border-radius: 3px; }
+  				.jijinlist-zhang { font-size: .8rem; text-align: center; line-height: 90px; }
+  				.jijinlist-zcolor { color: #f05a3c; position: absolute; right: 12px; }
+  				.jijinlist-jcolor { color: green; }
+  				.jijinlist-pj { color: #838383; position: absolute; top: 14px; right: 12px; font-size: .8rem; }
+  				.jijinlist-wupj { color: #838383; position: absolute; font-size: .8rem; top: 70px; right: 12px; }
+  			}
+  		}
+  	}*/ }
+  .managerList .manager-nav {
+    position: relative;
+    height: 35px;
+    background-color: #fff;
+    border-bottom: 1px solid #f6f6f6;
+    width: 100%;
+    font-size: .7rem;
+    z-index: 5; }
+    .managerList .manager-nav ul {
+      display: block;
+      margin-top: 1px;
+      height: auto;
+      overflow: hidden; }
+      .managerList .manager-nav ul li {
+        float: left;
+        height: 35px;
+        line-height: 35px;
+        text-align: center; }
+      .managerList .manager-nav ul li:nth-of-type(1) {
+        width: 45%;
+        overflow: hidden; }
+      .managerList .manager-nav ul li:nth-of-type(2) {
+        width: 20%; }
+      .managerList .manager-nav ul li:nth-of-type(3) {
+        width: 35%; }
+  .managerList .manager-con {
+    position: relative;
+    width: 100%;
+    padding-top: 130px;
+    height: auto;
+    display: block; }
+    .managerList .manager-con a {
+      width: 100%;
+      display: block;
+      height: 71px; }
+    .managerList .manager-con p {
+      height: 20px;
+      line-height: 20px; }
+    .managerList .manager-con p:nth-of-type(1) {
+      font-size: 1rem; }
+    .managerList .manager-con li {
+      width: 100%;
+      position: relative;
+      line-height: 70px;
+      height: auto;
+      overflow: hidden;
+      /* border-bottom: 1px solid #e8e8e8;*/ }
+      .managerList .manager-con li dl {
+        width: 100%;
+        height: 100%;
+        overflow: hidden; }
+      .managerList .manager-con li dd {
+        float: left;
+        text-align: center; }
+      .managerList .manager-con li dd:nth-of-type(1) {
+        width: 45%;
+        height: 70px;
+        /*border-bottom: 1px solid #e8e8e8;*/ }
+      .managerList .manager-con li dd:nth-of-type(2) {
+        width: 20%;
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border-bottom: 1px solid #e8e8e8;
+        height: 70px; }
+      .managerList .manager-con li dd:nth-of-type(3) {
+        width: 35%;
+        color: #e65a0d;
+        font-size: 1.02rem;
+        height: 70px;
+        font-weight: bold;
+        border-bottom: 1px solid #e8e8e8; }
+    .managerList .manager-con .man-icon {
+      height: 70px;
+      float: left;
+      margin-top: 18px; }
+    .managerList .manager-con .manager-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 22px; }
+    .managerList .manager-con .manager-left {
+      border-bottom: 1px solid #e8e8e8;
+      height: 70px;
+      left: 52px;
+      position: relative;
+      /*width: 100%;*/
+      width: 70%; }
+    .managerList .manager-con .manager-name {
+      color: #0b2c4b;
+      float: left;
+      position: absolute;
+      font-size: .95rem;
+      top: -8px;
+      text-transform: capitalize; }
+    .managerList .manager-con .manager-nt {
+      position: absolute;
+      top: 13px;
+      height: 58px;
+      color: #0b2c4b;
+      text-align: left;
+      font-size: .7rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 70%; }
+  .managerList .manager-menu {
+    position: relative;
+    height: 40px;
+    background-color: #f6f6f6;
+    font-weight: bold;
+    border-bottom: 1px solid #edecec;
+    z-index: 5; }
+    .managerList .manager-menu .listactive {
+      border-bottom: 1px solid #d22929;
+      color: #d22929; }
+    .managerList .manager-menu ul {
+      display: block;
+      width: auto;
+      height: auto;
+      overflow: hidden; }
+    .managerList .manager-menu li {
+      width: 33.2%;
+      height: 40px;
+      float: left;
+      text-align: center;
+      line-height: 40px;
+      font-size: 0.9rem; }
+
+/*基金经理suggest*/
+#manager-info {
+  position: absolute;
+  z-index: 7;
+  display: none;
+  top: 95px;
+  padding-bottom: 10px;
+  width: 100%;
+  overflow: auto;
+  background-color: #f6f6f6; }
+  #manager-info ul {
+    font-size: .9rem;
+    max-height: 200px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    /*& li:nth-of-type(2n){ background-color: #faf8f8;}*/ }
+    #manager-info ul li {
+      width: 100%;
+      height: 40px;
+      text-align: left;
+      line-height: 40px;
+      border-bottom: 1px solid #d7d7d7; }
+    #manager-info ul dl {
+      float: left;
+      width: 100%; }
+    #manager-info ul dd {
+      float: left; }
+  #manager-info .search-jjj dd:nth-of-type(1) {
+    width: 75%;
+    padding-left: 5%; }
+  #manager-info .search-jjj dd:nth-of-type(2) {
+    width: 20%; }
+  #manager-info .search-jjj span {
+    padding-left: 5px; }
+
+.listsuggest-close {
+  width: 100%;
+  padding: 10px 0;
+  text-align: right;
+  color: #9e9e9e;
+  font-size: .8rem;
+  position: relative; }
+
+.close {
+  margin-right: 10px; }

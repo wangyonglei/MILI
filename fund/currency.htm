@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+#include("public/no-cache.htm")
+<meta name="keywords" content="货币基金列表" />
+<meta name="description" content="货币基金列表" />
+<title>基情 基金排行</title>
+<link rel="stylesheet" type="text/css"
+	href="http://static.miliwealth.com/fund/css/common/common.css$!version">
+<link rel="stylesheet" type="text/css"
+	href="http://static.miliwealth.com/fund/css/currency/currency.css$!version">
+</head>
+<body>
+	#include("public/header.htm")
+	<section class="currency">
+		<div class="people-top">
+			<div class="people-search" id="people-search">
+				<form class="people-searchf">
+					<input type="text" name="search" placeholder="输入基金名称/代码/首字母"
+						value="" id="fund-search" maxlength="10" />
+					<button>确定</button>
+				</form>
+			</div>
+			<div class="jijinlist-menu">
+				<ul>
+					<li><a href="/fund/list?investType=1&keyWord=$!query.keyWord">偏股</a></li>
+					<li><a href="/fund/list?investType=2&keyWord=$!query.keyWord">偏债</a></li>
+					<li class="listactive"><a href="#">货币</a></li>
+					<li><a href="/fund/list?investType=4&keyWord=$!query.keyWord">保本</a></li>
+					<li><a href="/fund/list?investType=5&keyWord=$!query.keyWord">指数</a></li>
+					<li><a href="/fund/list?investType=6&keyWord=$!query.keyWord">QDII</a></li>
+				</ul>
+			</div>
+			<div class="jijinlist-nav">
+				<ul>
+					<li>基金名称</li>
+					<li>7日年化</li>
+					<li>近7日均值<span class="jiantou">↓</span></li>
+				</ul>
+			</div>
+		</div>
+		<div id="wrapper">
+			<div id="scroller">
+				<div id="thelist" class="jijinlist-con currency-con">
+					
+					<ul id="jinji-huobiul">#foreach($item in $list)
+						<li>
+							<dl>
+								<dd>
+									<div class="jijinhuobi-tit">$!{item.name}</div>
+									<div class="jijin-code">
+										<div class="jijinlist-count">$!{item.code}</div>
+									</div>
+								</dd>
+								<dd>
+									<p class="jijinlist-pj">$!{item.yieldRate.dataDate}</p>
+									<p>$!numberTool.format("#0.00",$!{item.fundNetValue.unitNv}) 
+									<span class="jijinlist-bai">%</span></p>
+								</dd>
+								<dd>
+									
+									
+										$!numberTool.format("#0.00",$!{item.yieldRate.score})
+										<span class="jijinlist-bai">%</span>
+									
+								</dd>
+							</dl>
+						</li>#end
+					</ul>
+					
+				</div>
+				<div id="pullUp">
+					<span class="pullUpIcon"></span> <span class="pullUpLabel">
+					#if($list.size()==100)
+						更多信息请通过搜索功能获取
+					#else
+						已无更多数据
+					#end
+					</span>
+				</div> 
+			</div>
+		</div>
+		<!-- suggest -->
+		<div class="fund-suggest">
+			<ul class="search-ssls"></ul>
+		</div>
+	</section>
+	<script	src="http://static.miliwealth.com/fund/code/jquery-1.8.0.min.js"></script>
+	<script src="http://static.miliwealth.com/fund/code/iscroll.js"></script>
+	<script src="http://static.miliwealth.com/fund/js/list/list.js$!version"></script>
+	<script src="http://static.miliwealth.com/fund/js/currency/currency.js$!version"></script>
+</body>
+</html>
+#include("public/tongji.htm")

@@ -1,0 +1,41 @@
+/*news*/
+#scroller{width: 100%;}
+.new-list { width: 100%; height: auto; overflow: hidden;
+	.swiper-slide{ text-align: center;}
+	.swiper-container  img{ width: 100%;  max-width: 480px;max-height: 110px;}
+	.new-list-banner { position: relative; background: #f2f2f2; width: 100%; height: auto;  background-color: #fff;
+		.new-list-banner { position: relative; width: 100%;
+			& img { width: 100%; }
+		}
+		.banner-txt{ position: absolute;left: 0; bottom: -20px; z-index: 999
+		}
+	}
+	.new-list-view { position: relative;
+		& a { display: block; width: 100%; height: 100%; }
+		.new-list-con { position: relative; padding: 0px 2% 10px 2%;
+			.new-list-conul { width: 100%; position: relative; -webkit-overflow-scrolling: touch; overflow-scrolling: touch; -moz-overflow-scrolling: touch; overflow-y:scroll; 
+				& dl { border-bottom: 1px solid #f2f2f2; padding-top: 5px; height: 71px; overflow: hidden; }
+				.new-list-conimg { width: 25%; height: auto; float: left; margin-right: 2%; text-align: right;
+					& img { width: 100%; max-height: 63px; max-width: 100px; }
+				}
+				.new-list-art { width: 73%; font-size: .8rem; display: block; margin-bottom: 5px; position: relative; float: left;
+					& h1 { margin-bottom: 10px; font-weight: normal; line-height: 20px; max-height:40px;  overflow: hidden; }
+					& p { margin: 2px 0; color: #666; font-size: 12px; 
+						& span{ padding: 0 3px;}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+#pullUp {height: 40px; text-align: center; line-height: 40px; font-weight: bold; font-size: 14px; color: #888; }
+#pullUp .pullUpIcon { position: relative;left: 50%; margin-left: -90px; display: block; float: left; width: 40px; height: 40px; background: url(http://static.miliwealth.com/fund/images/pull-up.png) 0 0 no-repeat; -webkit-background-size: 40px 80px; background-size: 40px 80px; -webkit-transition-property: -webkit-transform; -webkit-transition-duration: 250ms; }
+#pullUp.flip .pullUpIcon { -webkit-transform: rotate(0deg) translateZ(0); }
+#pullUp.loading .pullUpIcon { background-position: 0 100%; -webkit-transform: rotate(0deg) translateZ(0); -webkit-transition-duration: 0ms; -webkit-animation-name: loading; -webkit-animation-duration: 2s; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear; }
+@-webkit-keyframes loading {
+	from { -webkit-transform: rotate(0deg) translateZ(0); }
+	to { -webkit-transform: rotate(360deg) translateZ(0); }
+}
+.pullUpLabel{ text-align: center;}

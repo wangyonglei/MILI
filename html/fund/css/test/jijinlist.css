@@ -1,0 +1,547 @@
+@charset "UTF-8";
+.people {
+  padding-top: 0;
+  overflow: hidden;
+  /*基金列表页面*/
+  /*	.people-title { 
+  .people-logo { width: 50px; height: 50px; position: absolute; top: 0px; left: 10px; }
+  .people-logo img { width: 50px; height: 50px; }
+  .people-s { display: block; }
+  .people-search { width: 61px; height: 54px; position: absolute; top: 5px; right: 10px; }
+  .people-search img { width: 30px; height: 26px; position: absolute; top: 7px; right: 10px; }
+  	}*/ }
+  .people .people-top {
+    width: 100%;
+    z-index: 9;
+    background-color: #f6f6f6;
+    overflow: hidden;
+    position: fixed;
+    top: 45px;
+    left: 0; }
+  .people .people-title {
+    width: 100%;
+    position: relative;
+    font-size: 1.2rem;
+    color: #fff;
+    height: 50px;
+    background-color: #f05a3c;
+    line-height: 50px;
+    text-align: center; }
+  .people .people-menu {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    background-color: #d3e4ed; }
+    .people .people-menu dd {
+      float: left;
+      height: 60px;
+      line-height: 60px;
+      text-align: center; }
+    .people .people-menu dd:nth-of-type(1) {
+      width: 46%; }
+    .people .people-menu dd:nth-of-type(2) {
+      width: 24%; }
+    .people .people-menu dd:nth-of-type(3) {
+      width: 30%;
+      font-size: 12px; }
+  .people .people-con {
+    position: relative;
+    width: 100%;
+    top: 90px; }
+    .people .people-con p {
+      height: 20px;
+      line-height: 20px; }
+    .people .people-con p:nth-of-type(1) {
+      font-size: 1rem; }
+    .people .people-con ul {
+      display: block;
+      /*		.people-red { color: #48637d; }
+      		.people-green { color: #3c9029; }*/ }
+      .people .people-con ul li {
+        width: 100%;
+        height: 80px;
+        position: relative;
+        line-height: 80px;
+        border-bottom: 1px solid #e8e8e8; }
+        .people .people-con ul li dd {
+          float: left;
+          text-align: center;
+          line-height: 80px; }
+        .people .people-con ul li dd:nth-of-type(1) {
+          width: 30%;
+          height: 80px; }
+        .people .people-con ul li dd:nth-of-type(2) {
+          width: 14%;
+          font-size: .8rem;
+          color: #48637d; }
+        .people .people-con ul li dd:nth-of-type(3) {
+          width: 14%;
+          font-size: .8rem; }
+        .people .people-con ul li dd:nth-of-type(4) {
+          width: 20%;
+          font-size: .8rem;
+          padding-top: 20px; }
+        .people .people-con ul li dd:nth-of-type(5) {
+          width: 22%;
+          font-size: .8rem; }
+    .people .people-con .people-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 22.5px;
+      position: absolute;
+      top: 18px;
+      left: 5px; }
+    .people .people-con .people-name {
+      float: left;
+      position: absolute;
+      position: absolute;
+      left: 55px;
+      font-size: .8rem;
+      top: -12px;
+      text-transform: capitalize; }
+    .people .people-con .people-nt {
+      position: absolute;
+      left: 55px;
+      top: 12px;
+      color: #0b2c4b;
+      font-size: .8rem; }
+  .people .jijinlist-menu {
+    position: relative;
+    height: 40px;
+    background-color: #f6f6f6;
+    font-weight: bold;
+    border-bottom: 1px solid #edecec; }
+    .people .jijinlist-menu .listactive {
+      border-bottom: 1px solid #d22929;
+      color: #d22929; }
+    .people .jijinlist-menu ul {
+      display: block; }
+    .people .jijinlist-menu li {
+      width: 16.5%;
+      height: 40px;
+      float: left;
+      text-align: center;
+      line-height: 40px;
+      font-size: .9rem;
+      color: #626e82; }
+  .people .jijinlist-nav {
+    position: relative;
+    height: 35px;
+    background-color: #fff;
+    border-bottom: 1px solid #f6f6f6;
+    color: #626e82;
+    width: 100%;
+    font-size: .7rem; }
+    .people .jijinlist-nav ul {
+      display: block;
+      margin-top: 1px; }
+      .people .jijinlist-nav ul li {
+        float: left;
+        height: 35px;
+        line-height: 35px;
+        text-align: center; }
+      .people .jijinlist-nav ul li:nth-of-type(1) {
+        width: 48%;
+        text-align: left;
+        padding-left: 2%; }
+      .people .jijinlist-nav ul li:nth-of-type(2) {
+        width: 22%; }
+      .people .jijinlist-nav ul li:nth-of-type(3) {
+        width: 28%; }
+  .people .jijinlist-con {
+    position: relative;
+    padding-left: 2%;
+    padding-top: 130px; }
+    .people .jijinlist-con ul {
+      display: block;
+      position: relative;
+      width: 100%; }
+      .people .jijinlist-con ul li {
+        height: 70px;
+        position: relative;
+        width: 100%;
+        border-bottom: 1px solid #ebebeb;
+        overflow: hidden;
+        color: #626e82; }
+        .people .jijinlist-con ul li dd {
+          height: 70px;
+          display: block;
+          float: left; }
+        .people .jijinlist-con ul li dd:nth-of-type(1) {
+          width: 50%;
+          text-align: left; }
+        .people .jijinlist-con ul li dd:nth-of-type(2) {
+          width: 25%;
+          text-align: center;
+          line-height: 70px;
+          font-size: 1.1rem;
+          font-weight: bold; }
+        .people .jijinlist-con ul li dd:nth-of-type(3) {
+          width: 25%;
+          text-align: center;
+          /*padding-top: 10px; line-height: 22px; */
+          line-height: 45px; }
+        .people .jijinlist-con ul li .jijinlist-tit {
+          font-size: 0.9rem;
+          margin-top: 13px;
+          margin-bottom: 5px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          width: 100%; }
+        .people .jijinlist-con ul li .jijin-code {
+          display: inline;
+          position: relative;
+          height: 18px;
+          overflow: hidden; }
+          .people .jijinlist-con ul li .jijin-code .jianyi {
+            padding: 1px 10px;
+            float: left;
+            border: 1px solid #eaeaea;
+            text-align: center;
+            font-size: 10px !important;
+            border-radius: 10px; }
+          .people .jijinlist-con ul li .jijin-code .jijinlist-count {
+            float: left;
+            width: auto;
+            padding: 1px 10px;
+            margin-left: 5px;
+            font-size: .7rem;
+            border: 1px solid #eaeaea;
+            border-radius: 10px; }
+        .people .jijinlist-con ul li .jijinlist-zcolor {
+          color: #e65a0d;
+          font-size: 1.02rem;
+          font-weight: bold;
+          line-height: 0px; }
+        .people .jijinlist-con ul li .jijinlist-pj {
+          font-size: .7rem; }
+  .people .currency-con {
+    position: relative;
+    padding-left: 2%;
+    padding-top: 130px; }
+    .people .currency-con ul {
+      display: block;
+      position: relative;
+      width: 100%; }
+      .people .currency-con ul li {
+        height: 70px;
+        position: relative;
+        width: 100%;
+        border-bottom: 1px solid #ebebeb;
+        overflow: hidden;
+        color: #626e82;
+        /*.jijinlist-zcolor { color: #e65a0d; font-size: 1.02rem; font-weight: bold;line-height: 0px; }*/ }
+        .people .currency-con ul li dd {
+          height: 70px;
+          display: block;
+          float: left; }
+        .people .currency-con ul li dd:nth-of-type(1) {
+          width: 50%;
+          text-align: left; }
+        .people .currency-con ul li dd:nth-of-type(2) {
+          width: 25%;
+          text-align: center;
+          line-height: 25px;
+          padding-top: 10px;
+          font-size: 1.1rem;
+          font-weight: bold; }
+        .people .currency-con ul li dd:nth-of-type(3) {
+          width: 25%;
+          text-align: center;
+          /*padding-top: 10px; line-height: 22px; */
+          line-height: 71px;
+          color: #e65a0d;
+          font-size: 1.02rem;
+          font-weight: bold; }
+        .people .currency-con ul li .jijinlist-tit {
+          font-size: 0.9rem;
+          margin-top: 13px;
+          margin-bottom: 5px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          width: 100%; }
+        .people .currency-con ul li .jijin-code {
+          display: inline;
+          position: relative;
+          height: 18px;
+          overflow: hidden; }
+          .people .currency-con ul li .jijin-code .jianyi {
+            padding: 1px 10px;
+            float: left;
+            border: 1px solid #eaeaea;
+            text-align: center;
+            font-size: 10px !important;
+            border-radius: 10px; }
+          .people .currency-con ul li .jijin-code .jijinlist-count {
+            float: left;
+            width: auto;
+            padding: 1px 10px;
+            margin-left: 5px;
+            font-size: .7rem;
+            border: 1px solid #eaeaea;
+            border-radius: 10px; }
+        .people .currency-con ul li .jijinlist-pj {
+          font-size: .7rem;
+          font-weight: normal; }
+
+/*基金列表详情页*/
+.fund {
+  width: 100%;
+  position: relative;
+  padding-top: 50px; }
+  .fund .detail-tclass ul {
+    width: 320px; }
+  .fund .fund-nav {
+    width: 100%;
+    position: relative; }
+    .fund .fund-nav ul {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      border-bottom: 2px solid #e4e4e4;
+      padding: 15px 0; }
+      .fund .fund-nav ul li {
+        width: 20%;
+        float: left;
+        height: 45px;
+        text-align: center;
+        font-size: .8rem;
+        line-height: 22px; }
+      .fund .fund-nav ul li:nth-of-type(4) {
+        width: 40%; }
+      .fund .fund-nav ul li p:nth-of-type(1) {
+        color: #f05a3c; }
+      .fund .fund-nav ul li p:nth-of-type(2) {
+        color: #4e4c4c; }
+  .fund .fund-company {
+    position: relative;
+    height: auto;
+    overflow: hidden; }
+  .fund .fund-con {
+    position: relative;
+    color: #454545;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+    padding-bottom: 30px;
+    font-size: .9rem;
+    line-height: 1.4rem;
+    border-bottom: 2px solid #e4e4e4; }
+    .fund .fund-con .fund-dis {
+      width: 100%;
+      height: auto;
+      overflow: hidden; }
+    .fund .fund-con .fund-conl {
+      width: auto;
+      float: left;
+      display: inline;
+      width: 80%; }
+    .fund .fund-con .ml-chiyou {
+      float: right;
+      width: 18%;
+      color: #fff;
+      line-height: 18px;
+      padding-top: 10px;
+      max-width: 160px;
+      height: 50px;
+      background-color: red;
+      text-align: center;
+      margin-top: 10px;
+      margin-left: 5px; }
+    .fund .fund-con .ml-huan {
+      float: right;
+      width: 18%;
+      color: #fff;
+      line-height: 18px;
+      padding-top: 10px;
+      max-width: 160px;
+      height: 50px;
+      background-color: green;
+      text-align: center;
+      margin-top: 10px;
+      margin-left: 5px; }
+  .fund .fund-jl {
+    height: 40px; }
+    .fund .fund-jl .fund-icon {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 10px;
+      border-radius: 40px; }
+    .fund .fund-jl .fund-icon img {
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+      border-radius: 40px; }
+    .fund .fund-jl .fund-n {
+      position: absolute;
+      left: 60px; }
+    .fund .fund-jl .fund-txt {
+      position: absolute;
+      top: 20px;
+      left: 60px;
+      font-size: .8rem; }
+  .fund .fund-t {
+    position: relative;
+    color: #f05a3c;
+    font-size: .8rem;
+    margin: 28px auto 5px 10px; }
+  .fund .fund-table {
+    width: 112%;
+    position: relative;
+    left: -20px;
+    top: 10px; }
+    .fund .fund-table ul {
+      position: relative;
+      height: auto;
+      width: 100%; }
+      .fund .fund-table ul li {
+        height: 37px;
+        font-size: .8rem; }
+      .fund .fund-table ul li dl {
+        width: 100%;
+        height: 100%; }
+      .fund .fund-table ul li dd {
+        width: 20%;
+        float: left;
+        height: 100%;
+        line-height: 30px;
+        text-align: center; }
+      .fund .fund-table ul li:nth-of-type(2n-1) {
+        background-color: #f0f4f7; }
+  .fund .pai {
+    position: relative;
+    width: 30px;
+    height: 45px;
+    margin: 0 auto;
+    margin-top: 5px; }
+    .fund .pai ul {
+      height: auto;
+      width: 98%;
+      border: 1px solid #f0f4f7; }
+      .fund .pai ul li {
+        height: 10px;
+        width: 100%;
+        border-bottom: 1px solid #f0f4f7; }
+      .fund .pai ul li:nth-of-type(2n-1) {
+        background-color: #fff; }
+  .fund .pai .youxliang {
+    position: relative;
+    width: 120%; }
+  .fund .pai #y {
+    background-color: #5a99ce; }
+  .fund .pai #l {
+    background-color: #5a99ce; }
+  .fund .fund-risk {
+    position: relative; }
+    .fund .fund-risk .fund-f {
+      position: relative;
+      width: 98%;
+      margin: 0 auto;
+      margin-top: 40px; }
+      .fund .fund-risk .fund-f li {
+        width: 18%;
+        margin: 0 1%;
+        height: 27px;
+        background-color: #000;
+        float: left;
+        font-size: .95rem;
+        text-align: center; }
+      .fund .fund-risk .fund-f li p {
+        position: relative;
+        top: 27px; }
+      .fund .fund-risk .fund-f li:nth-of-type(1) {
+        background-color: #5fe951; }
+      .fund .fund-risk .fund-f li:nth-of-type(2) {
+        background-color: #dcf357; }
+      .fund .fund-risk .fund-f li:nth-of-type(3) {
+        background-color: #ffef59; }
+      .fund .fund-risk .fund-f li:nth-of-type(4) {
+        background-color: #fab853; }
+      .fund .fund-risk .fund-f li:nth-of-type(5) {
+        background-color: #e54a46; }
+  .fund .fund-risk .sanjiao {
+    width: 0;
+    position: relative;
+    left: 50%;
+    top: -40px;
+    margin-left: -15px;
+    z-index: 9;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #5e5e5e; }
+
+/*suggest*/
+.fund-suggest {
+  position: fixed;
+  z-index: 99;
+  background-color: #f6f6f6;
+  top: 95px;
+  display: none;
+  padding-bottom: 10px;
+  width: 100%;
+  overflow: auto; }
+  .fund-suggest .search-jjtit {
+    width: 0px;
+    height: 0px;
+    /* background-color: #f2f2f2; text-align: center; line-height: 40px; position: relative;*/
+    overflow: hidden; }
+  .fund-suggest ul {
+    font-size: .9rem;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    display: block;
+    /*& li:nth-of-type(2n){ background-color: #faf8f8;}*/ }
+    .fund-suggest ul li {
+      width: 100%;
+      height: 40px;
+      text-align: left;
+      line-height: 40px;
+      border-bottom: 1px solid #d7d7d7; }
+    .fund-suggest ul dl {
+      float: left;
+      width: 100%; }
+    .fund-suggest ul dd {
+      float: left; }
+  .fund-suggest dd:nth-of-type(1) {
+    width: 20%;
+    padding-left: 5%; }
+  .fund-suggest dd:nth-of-type(2) {
+    width: 55%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+  .fund-suggest dd:nth-of-type(3) {
+    width: 20%;
+    text-align: center; }
+
+/*貨比*/
+.jijinlist-huobif {
+  line-height: 51px;
+  color: #e65a0d;
+  font-weight: bold; }
+
+.jijinhuobi-tit {
+  font-size: 0.9rem;
+  line-height: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%; }
+
+/*背景*/
+.search-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 95px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 95;
+  display: none; }
+
+.jijinlist-zanwu {
+  line-height: 71px; }

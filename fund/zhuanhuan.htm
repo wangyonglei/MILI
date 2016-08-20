@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	#include("public/no-cache.htm")
+	<title>基情 基金转换建议</title>
+	<link rel="stylesheet" type="text/css" href="http://static.miliwealth.com/fund/css/common/common.css$!version"></head>
+	<link rel="stylesheet" type="text/css" href="http://static.miliwealth.com/fund/css/zhuanhuan/zhuanhuan.css$!version"></head>
+<body>
+	<section class="zhuanhuan" >
+		#include("public/header.htm")
+		<div class="zuhe-txt">
+			<p class="other-titlec ">面向全市场的转换方案</p>
+			（1）我们建议用户转换后的基金，为全部基金公司中，同种类型、基情评分最高的基金。
+			<br/>
+			（2）温馨提示：好基金可能因基金公司限售，渠道没有代销等原因，存在无法购买的情况。
+		</div>
+		<!-- 基金对比 -->
+		#if($listSize >0)
+			#foreach($item in $list)
+			<div class="other-title">
+				<ul class="other-duibi">
+					<li>目前持有</li>
+					<li>建议转换</li>
+				</ul>
+			</div>
+			
+			<div class="jijin-duibi zuhe-con">
+				<ul class="jijin-tuibitit">
+					<li><a href="/fund/fundDetail?sid=$!{fund.sid}&investType=$!item.investType.value">
+						<p>$!{fund.name}</p>
+						<p>$!item.investType | $!{fund.code}</p>
+						</a>
+					</li>
+					<li>vs</li>
+					
+					<li><a href="/fund/fundDetail?sid=$!item.sid&investType=$!item.investType.value">
+						<p>$!{item.name}</p>
+						<p>$!item.investType.name | $!{item.code}</p>
+						</a>
+					</li>
+				</ul>
+				
+				<ul class="jijin-tuibicon">
+					<li>
+						<p>
+						<span class="budao">不到</span>7.5<span class="budao">分</span>
+						</p>
+						<p>基情评分</p>
+					</li>
+					<li>
+						建议转换
+						<div class="zhuanhuan-jiantou"></div>
+					</li>
+					
+					<li>
+						<p>
+						#if($item.yieldRate.score)
+							$!numberTool.format("#0.0",$item.yieldRate.score)<span class="budao">分</span>
+						#else
+							-
+						#end
+						</p>
+						<p>基情评分</p>
+					</li>
+					
+				</ul>
+			</div>
+			#end
+			<!-- 基金对比结束 -->
+		#else
+			<div class="zhuanhuan-unfound">
+			    <p></p>
+			    <p>很遗憾，臣妾在该家基金公司实在找不到同种类型、基情评分大于等于7.5分的基金.</p>
+			    <p>                           您可以关注下面的基情基金组合</p>
+			</div>
+		#end
+		
+		<!-- 重点基金池 -->
+		
+			<div class="other-title other-titlec">基情推荐组合</div>
+		
+		<a href="/fund/zuheDetail?zuhe=$group[0].code">
+		<ul class="zuhe-con">
+			<div class="zuhe-cont">
+				<div class="zuhe-ct">$!{group[0].name}</div>
+				<div  class="zuhe-conclass">
+					<ul>
+						<li>绝对回报</li>
+						<li>波动性小</li>
+					</ul>
+				</div>
+			</div>
+			<ul class="other-shu">
+				<li>
+					<p>$numberTool.format("#0.00",$!{group[0].fundGroupYieldRate.nearly1Year})%</p>
+					<p>过去一年的收益</p>
+				</li>
+				<li>
+					<p>
+						$!popular.juedui
+						<span class="other-fen">人</span>
+					</p>
+					<p>人气指数</p>
+				</li>
+			</ul>
+		</ul>
+		</a>
+		<a href="/fund/zuheDetail?zuhe=$group[1].code">
+		<ul class="zuhe-con">
+			<div class="zuhe-cont">
+				<div class="zuhe-ct">$!{group[1].name}</div>
+				<div  class="zuhe-conclass">
+					<ul>
+						<li>兼顾收益风险</li>
+                        <li>波动性中等</li>
+					</ul>
+				</div>
+			</div>
+			<ul class="other-shu">
+				<li>
+					<p>$numberTool.format("#0.00",$!{group[1].fundGroupYieldRate.nearly1Year})%</p>
+					<p>过去一年的收益</p>
+				</li>
+				<li>
+					<p>
+						$!popular.wenjian
+						<span class="other-fen">人</span>
+					</p>
+					<p>人气指数</p>
+				</li>
+			</ul>
+		</ul>
+		</a>
+		<a href="/fund/zuheDetail?zuhe=$group[2].code">
+		<ul class="zuhe-con">
+			<div class="zuhe-cont">
+				<div class="zuhe-ct">$!{group[2].name}</div>
+				<div  class="zuhe-conclass">
+					<ul>
+						<li>博高收益</li>
+                        <li>波动性大</li>
+					</ul>
+				</div>
+			</div>
+			<ul class="other-shu">
+				<li>
+					<p>$numberTool.format("#0.00",$!{group[2].fundGroupYieldRate.nearly1Year})%</p>
+					<p>过去一年的收益</p>
+				</li>
+				<li>
+					<p>
+						$!popular.jiji
+						<span class="other-fen">人</span>
+					</p>
+					<p>人气指数</p>
+				</li>
+			</ul>
+		</ul>
+		</a>
+	</section>
+
+</body>
+</html>
+#include("public/tongji.htm")

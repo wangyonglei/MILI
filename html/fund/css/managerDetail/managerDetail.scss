@@ -1,0 +1,120 @@
+/*基金经理列表页*/
+.people-top { width: 100%; z-index: 9; background-color: #f6f6f6; overflow: hidden; position: fixed; top: 45px; left: 0; }
+
+	/*基金经理详情页*/
+	.managerDetail { width: 100%; position: relative; overflow: hidden; background-color: #f6f6f6;
+		.mandetail-head { width: 100%; position: relative; height: 220px; background-color: #faf9fa; color: #626e82;
+			.mandetail-tit { width: 40%; overflow: hidden; text-align: center; color: #fff; position: relative; margin: 0 auto; top: 10px; }
+			.mandetail-title { width: 100%; height: 38px; line-height: 38px; text-align: center; font-size: 1.1rem; top: 18px; color: #fff; position: relative; }
+			.mandetail-icon { width: 60px; height: 63px; margin: 0 auto; position: relative; border-radius: 10px; overflow: hidden; }
+			.mandetail-icon img { width: 60px; }
+			.mandetail-name { width: auto; position: relative; text-align: center; font-size: 1rem; height: 25px; line-height: 25px; color: #000; }
+			.mandetail-tclass { position: relative; top: 15px; overflow: hidden;
+				& ul { position: relative; margin: 0 auto; height: auto; font-size: .85rem; overflow: hidden; background-color: #fff; border-radius: 5px; border: 1px solid #d1d1d1;
+					& li { float: left; width: 80px; height: 27px; line-height: 29px; text-align: center; background-color: #fff; cursor: pointer;
+						& a { width: 100%; height: 100%; display: block; }
+					}
+					& li:nth-of-type(2) { border-left: 1px solid #d1d1d1; }
+					& li:nth-of-type(3) { border-left: 1px solid #d1d1d1; }
+				}
+				.mandetail-act { background-color: #eb3434;
+					& a { color: #fff; }
+				}
+				p { width: 100%; display: none; }
+				.on { display: block; }
+				 }
+				#mandetail-s div { display: none; }
+				.mandetail-s { width: 100%; position: relative; text-align: center; text-indent: 2%; top: 14px;
+					.mandetail-fen {  font-size: 1.5rem; font-weight: normal; }
+					.mandetail-score { text-align: center; font-size: 3rem;  }
+				}
+				.mandetail-offer { width: 100%; position: relative; top: 10px; text-align: center; font-size: 0.9rem;
+					.mandetail-renqi { float: left; padding-left: 1rem; }
+					.mandetail-gz { float: right; font-size: .7rem; background-color: #fff; border-radius: 5px; margin-right: 20px;
+						& a { display: block; padding: 0 5px; color: #e65a0d }
+					}
+				}
+			}
+	
+			.mandetail-nav { width: 100%; position: relative; background-color: #fcfcfc;
+				ul { width: 100%; height: auto; overflow: hidden; padding: 15px 0; font-size: .8rem;
+					& li { width: 32%; float: left; height: 45px; text-align: center; }
+					& li p:nth-of-type(1) { color: #9c9c9c; margin-top: 5px; }
+					& li p:nth-of-type(2) { color: #e65a0d; margin-top: 5px; }
+					& li:nth-of-type(2) { border-left: 1px solid #e4e4e4; border-right: 1px solid #e4e4e4; }
+				}
+			}
+			.mandetail-company, .mandetail-shuiping, .mandetail-style, .mandetail-off { position: relative; background-color: #fcfcfc; border-top: 1px solid #e4e4e4; margin-top: 10px; }
+			.mandetail-con { position: relative; color: #454545; padding-left: 10px; padding-right: 10px; overflow: hidden; font-size: .8rem; line-height: 1.2rem; padding-bottom: 15px; }
+			.mandetail-t { position: relative; color: #f05a3c; font-size: .8rem; height: 40px; line-height: 40px; margin: 10px auto 10px 10px; border-bottom: 1px solid #e4e4e4; }
+			.mandetail-table { width: 112%; position: relative; left: -20px; top: 10px; }
+			.mandetail-table ul { position: relative; height: auto; width: 100%; }
+			.mandetail-table ul li { height: 37px; font-size: 1rem; }
+			.mandetail-table ul li dl { width: 100%; height: 100%; }
+			.mandetail-table ul li dd { width: 20%; float: left; height: 100%; font-size: .9rem; line-height: 30px; text-align: center; }
+			.mandetail-table ul li:nth-of-type(2n-1) { background-color: #f0f4f7; }
+			.pai { position: relative; width: 30px; height: 45px; margin: 0 auto; margin-top: 5px;
+				ul { height: auto; width: 98%; border: 1px solid #f0f4f7;
+					& li { height: 10px; width: 100%; border-bottom: 1px solid #f0f4f7; }
+					& li:nth-of-type(2n-1) { background-color: #fff; }
+				}
+			}
+		}
+		
+			.eva-contable { width: 100%; margin: 0 auto; text-align: center; line-height: 30px; border-top: 1px solid #edebeb; border-left: 1px solid #edebeb; border-right: 1px solid #edebeb; 
+				.fundMn{ position: absolute; }
+				.fundMnred{ position: absolute; right: 0; top: 22px; z-index: 2}
+
+			}
+			.eva-contable li { height: 50px; width: 100%; border-bottom: 1px solid #edebeb; font-size: 12px;
+				& dt { height: auto; overflow: hidden; line-height: 50px; }
+				& dl { float: left; height: 50px; position: relative; }
+				& dl:nth-of-type(1) { width: 25%;  text-align: left; /*overflow: hidden; white-space: nowrap; text-overflow: ellipsis;*/ line-height: 22px; border-right: 1px solid #edebeb; }
+				& dl:nth-of-type(2) { width: 22%;   word-wrap: break-word; /*overflow: hidden; white-space: nowrap; text-overflow: ellipsis; */ line-height: 22px; border-right: 1px solid #edebeb; }
+				& dl:nth-of-type(2) p { height: 20px !important; line-height: 22px; overflow: hidden; }
+				/*& dl  p:nth-of-type(1) { text-align: left; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 100%;}*/
+				/*& dl  p:nth-of-type(2) { text-align: left; }*/
+				/*& dl  span:nth-of-type(3){  float: right; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 100%;}*/
+
+				& dl:nth-of-type(3) { width: 15%; border-right: 1px solid #edebeb;      /*background-image: url(../images/bg.jpg);*/ background-size: contain; -webkit-background-size: contain; background-position: center;      /* color: #fff;*/ background-repeat: no-repeat; }
+				& dl:nth-of-type(4) { width: 15%; border-right: 1px solid #edebeb;      /*background-image: url(../images/bg.jpg);*/ background-size: contain; -webkit-background-size: contain; background-position: center;      /*color: #fff; */ background-repeat: no-repeat; }
+				& dl:nth-of-type(5) { width: 20%;  }
+			}
+			.eva-contable li:nth-of-type(2n+1){ background-color: #f0f4f7}
+			.eva-contable li:nth-of-type(2n+1) span:nth-of-type(2){ background-color: #f0f4f7; width: auto; height: auto;}
+			.eva-contable li:nth-of-type(2n) span:nth-of-type(2){  background-color: #fff; width: auto; height: auto;}
+			#eva-contableli { background: rgba(205, 205, 205, 0.9); color: #990000; font-size: 12px; width: 100%;
+				& dt { height: auto; overflow: hidden; }
+				& dl { float: left; height: 30px; }
+				& dl:nth-of-type(1) { width: 25%;  border-right: 1px solid #edebeb; }
+				& dl:nth-of-type(2) { width: 22%; border-right: 1px solid #edebeb; }
+				& dl:nth-of-type(3) { width: 15%; border-right: 1px solid #edebeb; }
+				& dl:nth-of-type(4) { width: 15%; border-right: 1px solid #edebeb; }
+				& dl:nth-of-type(5) { width: 20%;  }
+			}
+
+		#manager-info { width: 100%; position: fixed; z-index: 99; background-color: #f6f6f6; top: 95px; display: none; height: auto;  padding-bottom: 10px;
+			.search-jjtit { width: 0; height: 0px;/* background-color: #f2f2f2; text-align: center; line-height: 40px; position: relative;*/ overflow: hidden; }
+			& ul { position: relative; font-size: .9rem;
+				& li { width: 100%; height: 40px; text-align: left; line-height: 40px; border-bottom: 1px solid #d7d7d7 }
+				/*& li:nth-of-type(2n){ background-color: #faf8f8;}*/
+				& dl { float: left; width: 100%; }
+				& dd { float: left; }
+			}
+			.search-jjj { & dd:nth-of-type(1) { width: 75%; padding-left: 5%; }
+				& dd:nth-of-type(2) { width: 20%; }
+				& span { padding-left: 5px; }
+			}
+		}
+
+/*新闻页面点赞*/
+.new-detail-zan { width: 96%; padding: 20px 2%; position: relative; height: 35px;  line-height: 35px;background-color: #fff;
+	& a { display: block; width: 100%; height: 100%; font-size: 10px; color: #878787; }
+	& li { float: left; text-align: center; border: 1px solid #eaeaea;/* background-color: #fff*/; }
+	& li:nth-of-type(1) { width: 32%; }
+	& li:nth-of-type(2) { width: 32%; margin-left: 1%; margin-right: 1%; }
+	& li:nth-of-type(3) { width: 32%; }
+	.new-zan1 { width: 16px; height: 16px; position: relative; top: 2px;
+		& img { width: 16px; height: 16px; }
+	}
+}

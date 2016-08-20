@@ -1,0 +1,134 @@
+$border-bottom: 1px solid #e6e6e6;
+.fund-t { position: relative; color: #626e82; font-size: 1rem; height: 40px; line-height: 40px; border-bottom: $border-bottom; }
+.fund-tcenter { text-align: center; width: 103%; left: -3%; }
+/*组合列表页*/
+.zuhe { position: relative; top: 0; left: 0; background-color: #f5f5f5;
+	.zuhe-con { position: relative;  margin-bottom: 10px;background-color: #fff;font-size: .9rem; line-height: 1.4rem; padding: 0 3%;
+		.zuhe-con-left { width: 50%; float: left; color: #000; line-height: 25px; }
+		.zuhe-con-right { width: 50%; float: right; color: #000 }
+		.zuhe-cont { position: relative; border-bottom: $border-bottom; padding: 10px 0; display: -webkit-box; }
+		.zuhe-ct { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 35%; font-size: 1rem;  margin-left: 3%; }
+		.zuhe-conclass { position: relative; width: 60%; float: right;  font-size: .9rem;
+			& ul { width: 195px; float: right; height: auto; overflow: hidden; }
+			& li { width: 80px; text-align: center; margin-right: 5px; padding: 0 5px; float: left; font-size: .8rem; border-radius: 3px; height: 20px; line-height: 20px; }
+			& li:nth-of-type(1) { color: #82a1e5; border: 1px solid #82a1e5; }
+			& li:nth-of-type(2) { color: #f4986b; border: 1px solid #f4986b; }
+		}
+	}
+	.other-shu { height: auto; width: 100%; padding: 10px 0; overflow: hidden; overflow: hidden;
+		& li { width: 50%; float: left;
+			& p:nth-of-type(1) { font-size: 1.5em; color: #fe484a; }
+			& p:nth-of-type(2) { font-size: .8em; color: #626e82; }
+		}
+		& li:nth-of-type(2) { text-align: center; }
+		& li:nth-of-type(1) { width: 47%; margin-left: 3%; }
+	}
+	.zuhe-tu{
+		& span:nth-of-type(2) { border-bottom:2px solid #8ece4a ; }
+		& span:nth-of-type(1) { border-bottom:2px solid #c00000 ;}
+		.img1 ,.img2{ width: 100%; height: auto;}
+		& p{ font-size: .7rem;}
+	}
+	
+/*	.zuhe-l{float: left;width: 25%; font-size: 12px;
+		& p:nth-of-type(1){border-bottom:2px solid #c00000 ; margin-top: 20px;}
+		& p:nth-of-type(2){border-bottom:2px solid #8ece4a ; margin-top: 20px;}
+		& p:nth-of-type(3){ margin-top: 20px;}
+	}*/
+	/*.zuhe-r{ float:right; width: 71%;
+		& img{ width: 100%; height: 100%; overflow: hidden; margin: 10px 0;}
+	}*/
+}
+
+
+/*================*/
+.zuhe-detailz{position: relative; height: 50px; color: #626e82; width: 90%; margin-left: 5% ;border-bottom: 1px solid #e6e6e6; padding-top: 15px; line-height: 21px;
+& p:nth-of-type(1){ font-size:1rem;}
+& p:nth-of-type(2){font-size:.8rem;}
+}
+.zuhe-maimai{ position: relative; width: 96%; padding: 0 2%; height: auto; overflow: hidden;
+
+.zuhe-maimaitit{
+	position: relative; height: 40px; line-height: 40px; font-size: .8rem; text-align: center;border-bottom: 1px solid #e6e6e6;
+	& li{ float: left; }
+	& li:nth-of-type(1){ width: 35%; }
+	& li:nth-of-type(2){ width: 33%; }
+	& li:nth-of-type(3){ width: 31%;}
+}
+	.zuhe-maimaiul{ position: relative; 
+		& li{ height: 60px; border-bottom: 1px solid #e6e6e6; padding-top: 10px; }
+		.zuhe-mai{  position: relative;top: 10px; float: left;width: 25px; line-height: 25px; text-align: center; font-size: .8rem; height: 25px;  border-radius: 25px; color: #fff; }
+		.zuhe-name{ float: left;font-size: .8rem; position: relative; margin-left: 10px;line-height: 23px; }
+		.zuhe-fen{ float: right; font-size: .8rem; line-height: 23px; color: #fe484a}
+		.zuhe-num{ font-size: 12px; color: #959da9; }
+		.zuhe-numr{ font-size: 12px; color: #959da9;text-align: right; }
+		& dl{ height: auto; width: 100%; overflow: hidden; font-size: .8rem;}
+		& dd{ float: left; position: relative;}
+		& dd:nth-of-type(1){ width: 50%;  overflow:hidden;white-space:nowrap;text-overflow:ellipsis; text-align: left;}
+		& dd:nth-of-type(2){ width: 15%;  line-height: 23px; color: red}
+		& dd:nth-of-type(3){ width: 35%; line-height: 50px;}
+	}
+
+	.zm{
+		.zuhe-mai{background-color: #fe484a;}
+		.zuhe-name{color: #fe484a}
+		.zuhe-fen{ color: #fe484a}
+	}
+	.z{
+	.zuhe-mai{background-color: #09c990;}
+	.zuhe-name{color: #09c990}
+	.zuhe-fen{ color: #09c990}
+	}
+
+}
+.zuhefetail-con{ position: relative;color: #959da9;padding: 0 2%; width: 96%;
+	.zuhedetail-img{ width: 100%; height: 120px; position: relative; /*background-size:contain; background-image: url(../images/rund.png); background-position: center;background-repeat: no-repeat;*/ margin: 10px 0; }
+	.zuhedetail-contit{  height: 30px; position: relative; width: 100%;border-bottom: 1px solid #e6e6e6;
+		& li{ float:left;height: 30px; line-height: 30px; text-align: center; font-size: .9rem;}
+		& li:nth-of-type(1){ width: 38%}
+		& li:nth-of-type(2){width: 20%;}
+		& li:nth-of-type(3){width: 25%;}
+		& li:nth-of-type(4){width: 17%;}
+	}
+	.zihedetail-conul{ height: auto; position: relative;
+		/*& a{ width: 100%; height: 100%; display: block;}*/
+		& li{ height: 50px; text-align: center; width: 100%;border-bottom: 1px solid #e6e6e6; position: relative;font-size: .8rem;
+			& dl{ height: auto; width: 100%; overflow: hidden; font-size: .8rem; /*padding-top: 5px;*/}
+			& dd{ float: left; position: relative;
+				& p:nth-of-type(1){ margin-top: -7px;}
+			}
+			& dd:nth-of-type(1){ width: 30%; padding-left: 8%; overflow:hidden;white-space:nowrap;text-overflow:ellipsis; text-align: left;}
+			& dd:nth-of-type(2){ width: 20%;  line-height: 50px; color: red}
+			& dd:nth-of-type(3){ width: 25%; line-height: 50px;text-align: right;}
+			& dd:nth-of-type(4){ width: 17%;line-height: 50px;}
+		}
+		.zuhe-detfk{ width: 15px; height: 15px;left: -20px;top: 17px; position:relative;  display: block;}
+		.color1{background-color: #439cde;}
+		.color2{ background-color: #43c6de}
+		.color3{ background-color: #f34f91}
+		.color4{ background-color: #ee970d}
+		.color5{ background-color: #436bde}
+		& li:nth-of-type(1) dd:nth-of-type(1) .zuhe-detfk{background-color: #439cde;}
+		& li:nth-of-type(2) dd:nth-of-type(1) .zuhe-detfk{background-color: #43c6de;}
+		& li:nth-of-type(3) dd:nth-of-type(1) .zuhe-detfk{background-color: #f34f91;}
+		& li:nth-of-type(4) dd:nth-of-type(1) .zuhe-detfk{background-color: #ee970d;}
+		& li:nth-of-type(5) dd:nth-of-type(1) .zuhe-detfk{background-color: #436bde;}
+	}
+}
+.fund-biaoxian{ background-color: #fff;border-bottom: 1px solid #e6e6e6;}
+/*.other-title{ text-align: left; text-indent: 1rem; font-size: .9rem;}*/
+.fund-rose{ background-color: #fff; padding-bottom: 10px;
+.zuhef-con{ font-size: .8rem;}
+}
+#tab_menu{ position: relative;}
+.fund-shu{ padding-left: 5px; padding-right: 5px; }
+
+/*===============================区分开样式用=============================*/
+$border-bottom: 1px solid #e6e6e6;
+/*趋势图样式*/
+#tab_menu { height: 30px; line-height: 30px; border-radius: 5px; overflow: hidden; border: $border-bottom; }
+#tab_menu li { float: left; text-align: center; cursor: pointer; margin-left: -1px; width: 25%; position: relative; font-weight: bold; font-size: .95rem; border-right: $border-bottom }
+#tab_box { height: 240px; clear: both; }
+#tab_menu li.selected { background: #ff0000; color: #fff }
+.main { position: fixed; top: 45px; bottom: 0; width: 100%; overflow: scroll; }
+.fund-trend { height: 240px; padding-bottom: 30px; padding-right: 3%; }

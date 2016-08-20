@@ -1,0 +1,4 @@
+#suggest_fund_manager ,#suggest_fund ,#suggest_fund_company{ margin:0; padding:0; list-style: none;  position: relative; max-height: 100px; border:1px solid #dce4ec ; padding:5px; ; overflow-y: scroll;  width: 400px;  display: none;
+	& li{ margin:0; padding:0; list-style: none; cursor:pointer}
+	& li:hover{ background:rgb(75, 198, 176)}
+}

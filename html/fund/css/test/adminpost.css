@@ -1,0 +1,18 @@
+#suggest_fund_manager, #suggest_fund, #suggest_fund_company {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  max-height: 100px;
+  border: 1px solid #dce4ec;
+  padding: 5px;
+  overflow-y: scroll;
+  width: 400px;
+  display: none; }
+  #suggest_fund_manager li, #suggest_fund li, #suggest_fund_company li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    cursor: pointer; }
+  #suggest_fund_manager li:hover, #suggest_fund li:hover, #suggest_fund_company li:hover {
+    background: #4bc6b0; }

@@ -1,0 +1,174 @@
+@charset "UTF-8";
+.fund-t {
+  position: relative;
+  color: #626e82;
+  font-size: 1rem;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #e6e6e6; }
+
+.fund-tcenter {
+  text-align: center;
+  width: 103%;
+  left: -3%; }
+
+/*组合列表页*/
+.zuheList {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #f5f5f5; }
+  .zuheList .zuhe-con {
+    position: relative;
+    margin-bottom: 10px;
+    background-color: #fff;
+    font-size: .9rem;
+    line-height: 1.4rem;
+    padding: 0 3%; }
+    .zuheList .zuhe-con .zuhe-con-left {
+      width: 50%;
+      float: left;
+      color: #000;
+      line-height: 25px; }
+    .zuheList .zuhe-con .zuhe-con-right {
+      width: 50%;
+      float: right;
+      color: #000; }
+    .zuheList .zuhe-con .zuhe-cont {
+      position: relative;
+      border-bottom: 1px solid #e6e6e6;
+      padding: 10px 0;
+      display: -webkit-box; }
+    .zuheList .zuhe-con .zuhe-ct {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 50%;
+      font-size: 1rem; }
+    .zuheList .zuhe-con .zuhe-ctfof {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 70%;
+      font-size: 1rem; }
+    .zuheList .zuhe-con .zuhe-conclass {
+      position: relative;
+      width: 50%;
+      float: right;
+      font-size: .9rem; }
+      .zuheList .zuhe-con .zuhe-conclass ul {
+        width: 195px;
+        float: right;
+        height: auto;
+        overflow: hidden; }
+      .zuheList .zuhe-con .zuhe-conclass li {
+        width: 80px;
+        text-align: center;
+        margin-right: 5px;
+        padding: 0 5px;
+        float: left;
+        font-size: .8rem;
+        border-radius: 3px;
+        height: 20px;
+        line-height: 20px; }
+      .zuheList .zuhe-con .zuhe-conclass li:nth-of-type(1) {
+        color: #82a1e5;
+        border: 1px solid #82a1e5; }
+      .zuheList .zuhe-con .zuhe-conclass li:nth-of-type(2) {
+        color: #f4986b;
+        border: 1px solid #f4986b; }
+    .zuheList .zuhe-con .zuhe-renqi {
+      position: relative;
+      width: 30%;
+      float: right;
+      text-align: right;
+      font-size: 12px; }
+      .zuheList .zuhe-con .zuhe-renqi span {
+        color: #fe484a; }
+  .zuheList .other-shu {
+    height: auto;
+    width: 100%;
+    padding: 10px 0;
+    overflow: hidden; }
+    .zuheList .other-shu li {
+      width: 50%;
+      float: left; }
+      .zuheList .other-shu li p:nth-of-type(1) {
+        font-size: 1.5em;
+        color: #fe484a; }
+      .zuheList .other-shu li p:nth-of-type(2) {
+        font-size: .8em;
+        color: #626e82; }
+    .zuheList .other-shu li:nth-of-type(2) {
+      text-align: center; }
+    .zuheList .other-shu li:nth-of-type(1) {
+      width: 50%; }
+  .zuheList .tesefof {
+    position: relative;
+    height: auto;
+    width: 100%;
+    padding: 10px 0;
+    overflow: hidden; }
+    .zuheList .tesefof li {
+      width: 50%;
+      float: left;
+      color: #626e82;
+      font-size: 12px; }
+      .zuheList .tesefof li span {
+        color: #fe484a;
+        font-size: 13px; }
+    .zuheList .tesefof .fofmore {
+      width: 60px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      float: right;
+      border-radius: 5px;
+      border: 1px solid #e6e6e6; }
+  .zuheList .zuhe-tu span:nth-of-type(2) {
+    border-bottom: 2px solid #8ece4a; }
+  .zuheList .zuhe-tu span:nth-of-type(1) {
+    border-bottom: 2px solid #c00000; }
+  .zuheList .zuhe-tu .img1, .zuheList .zuhe-tu .img2 {
+    width: 100%;
+    height: auto; }
+  .zuheList .zuhe-tu p {
+    font-size: .7rem; }
+
+.zuhe-tab {
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  background-color: #fff; }
+  .zuhe-tab ul {
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    height: 30px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    overflow: hidden; }
+  .zuhe-tab li {
+    float: left;
+    width: 50%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: .95rem;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative; }
+  .zuhe-tab li:nth-of-type(2) {
+    border-left: 1px solid #e6e6e6;
+    margin-left: -1px; }
+  .zuhe-tab .selected {
+    background: #ff0000;
+    color: #fff; }
+
+#zuhe-tab-main {
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+  position: relative; }
+  #zuhe-tab-main .tab-2 {
+    display: none; }

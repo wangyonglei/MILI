@@ -1,0 +1,116 @@
+.buyfund {
+  position: relative; }
+  .buyfund .buyFund-banner {
+    width: 100%;
+    height: 100px;
+    background-color: #f6f5f5;
+    text-align: center; }
+    .buyfund .buyFund-banner img {
+      width: 100%;
+      height: 100px;
+      max-width: 420px; }
+  .buyfund .buyFund-title {
+    position: relative;
+    line-height: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0; }
+    .buyfund .buyFund-title p:nth-of-type(1) {
+      text-align: left;
+      padding-left: 1%;
+      width: 80%;
+      float: left; }
+    .buyfund .buyFund-title .buyFund-feilv {
+      width: 17%;
+      text-align: center;
+      line-height: 30px;
+      float: right;
+      font-size: 12px; }
+  .buyfund .buyFund-ul {
+    position: relative;
+    /*.buyFund-more{ width: 10%; float: right; text-align: center; line-height: 70px; height: 70px; display: block;}*/ }
+    .buyfund .buyFund-ul li {
+      position: relative;
+      width: 100%;
+      padding: 10px 0;
+      height: auto;
+      overflow: hidden;
+      border-top: 5px solid #f2f2f2; }
+      .buyfund .buyFund-ul li a {
+        color: #333;
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden; }
+    .buyfund .buyFund-ul .buyFund-nol {
+      width: 73%; }
+    .buyfund .buyFund-ul .buyFund-icon {
+      margin-left: 1%;
+      max-width: 70px;
+      height: 70px;
+      float: left;
+      width: 18%; }
+      .buyfund .buyFund-ul .buyFund-icon img {
+        width: 58px;
+        height: 58px; }
+    .buyfund .buyFund-ul .buyFund-con {
+      margin-left: 2%;
+      width: 60%;
+      margin-right: 2%;
+      float: left;
+      height: auto;
+      overflow: hidden;
+      position: relative; }
+      .buyfund .buyFund-ul .buyFund-con P:nth-of-type(1) {
+        font-weight: bold;
+        font-size: .85rem;
+        position: relative; }
+      .buyfund .buyFund-ul .buyFund-con P:nth-of-type(2) {
+        font-size: 12px;
+        position: relative; }
+    .buyfund .buyFund-ul .buyfund-tag {
+      position: relative;
+      float: left;
+      width: 100%;
+      height: auto;
+      overflow: hidden; }
+      .buyfund .buyFund-ul .buyfund-tag span {
+        width: auto;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        padding: 2px 4px;
+        border: 1px solid #f2f2f2;
+        margin: 3px;
+        float: left; }
+    .buyfund .buyFund-ul .buyFund-rate {
+      width: 17%;
+      float: right;
+      text-align: center;
+      line-height: 70px; }
+  .buyfund .buyFund-qd {
+    width: 100%;
+    position: relative;
+    height: 25px;
+    overflow: hidden;
+    border-top: 1px solid #f2f2f2;
+    padding: 10px 0; }
+    .buyfund .buyFund-qd p {
+      width: 20%;
+      height: 25px;
+      background-color: #ff9933;
+      font-size: 12px;
+      padding: 0 2%;
+      text-align: center;
+      line-height: 25px;
+      float: left;
+      border-radius: 5px; }
+    .buyfund .buyFund-qd P:nth-of-type(1) {
+      margin-left: 20%;
+      margin-right: 6%; }
+    .buyfund .buyFund-qd P:nth-of-type(2) {
+      margin-right: 20%;
+      margin-left: 6%; }
+    .buyfund .buyFund-qd a {
+      color: #fff; }
